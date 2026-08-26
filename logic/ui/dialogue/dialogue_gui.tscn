@@ -67,9 +67,9 @@ metadata/_custom_type_script = "uid://g32um0mltv5d"
 
 [node name="ChoicesBox" type="VBoxContainer" parent="DialogueTexture" unique_id=748506387]
 layout_mode = 0
-offset_left = 628.0
+offset_left = 580.0
 offset_top = -96.0
-offset_right = 1228.0
+offset_right = 1180.0
 offset_bottom = 4.0
 theme_override_constants/separation = 8
 

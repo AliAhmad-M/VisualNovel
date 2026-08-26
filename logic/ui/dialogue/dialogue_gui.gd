@@ -8,11 +8,15 @@ extends Control
 @onready var dialogue_label: DialogueLabel = $DialogueTexture/DialogueLabel
 @onready var choices_box: VBoxContainer = $DialogueTexture/ChoicesBox
 @onready var character_stage: CharacterStage = $CharacterStage
+@onready var dialogue_menu: DialogueMenu = $DialogueMenu
 
 var resource: DialogueResource
 var current_line: DialogueLine
 var is_typing: bool = false
 var waiting_for_tap: bool = false
+
+var is_skipping: bool = false
+var _last_speaker: String = ""
 
 var choices_box_base_y: float
 var choice_button_w: float
@@ -25,12 +29,34 @@ func _ready() -> void:
 
 	# Configure the choice buttons
 	choices_box_base_y = choices_box.position.y
-	choice_button_w = choice_normal_tex.get_size().x * 0.7
+	choice_button_w = choice_normal_tex.get_size().x * 0.5
 	choice_button_h = choice_normal_tex.get_size().y * 0.7
 
+	# Menu
+	dialogue_menu.continue_pressed.connect(advance)
+	dialogue_menu.skip_pressed.connect(toggle_skip)
+
+func toggle_skip() -> void:
+	is_skipping = not is_skipping
+	
+	if not is_skipping:
+		return
+		
+	if choices_box.visible:
+		is_skipping = false
+		return
+		
+	if is_typing:
+		dialogue_label.visible_ratio = 1.0
+		
+	elif waiting_for_tap:
+		waiting_for_tap = false
+		_next(current_line.next_id)
+	
 func start(dialogue_resource: DialogueResource, cue: String = "", extra_game_states: Array = []) -> void:
-	# Start new dialogue
 	resource = dialogue_resource
+	is_skipping = false
+	_last_speaker = ""
 	visible = true
 	_next(cue, extra_game_states)
 
@@ -39,6 +65,7 @@ func _next(cue: String, extra_game_states: Array = []) -> void:
 	current_line = await DialogueManager.get_next_dialogue_line(resource, cue, extra_game_states)
 	
 	if not current_line:
+		is_skipping = false
 		await character_stage.clear_all()
 		visible = false
 		return
@@ -47,24 +74,34 @@ func _next(cue: String, extra_game_states: Array = []) -> void:
 	_show_line(current_line)
 	
 func _show_line(line: DialogueLine) -> void:
+	# Skip stops the moment the speaker changes
+	if is_skipping and _last_speaker != "" and line.character != _last_speaker:
+		is_skipping = false
+	_last_speaker = line.character
+
 	# Clear previous choices
 	for c in choices_box.get_children():
 		c.queue_free()
 	choices_box.visible = false
 	choices_box.position.y = choices_box_base_y
-	
-	# Display speaker name
+
+	# Display name
 	name_label.text = line.character
 	character_stage.show_speaker(line.character, line.get_tag_value("mood"))
-	
-	# Display dialogue line
+
+	# Show dialogue
 	dialogue_label.dialogue_line = line
-	dialogue_label.type_out()
-	await dialogue_label.finished_typing
-	
-	# Display choices if any
+	if is_skipping:
+		dialogue_label.visible_ratio = 1.0
+	else:
+		dialogue_label.type_out()
+		await dialogue_label.finished_typing
+
+	# Show choices
 	var allowed_responses := line.responses.filter(func(r): return r.is_allowed)
 	if allowed_responses.size() > 0:
+		# Stop and wait for the player to pick
+		is_skipping = false
 		for i in range(allowed_responses.size()):
 			var response = allowed_responses[i]
 			var btn := _make_choice_button(response.text)
@@ -74,6 +111,10 @@ func _show_line(line: DialogueLine) -> void:
 			if i > 0:
 				choices_box.position.y -= choice_button_h
 		choices_box.visible = true
+		
+	elif is_skipping:
+		# keep chaining
+		_next(current_line.next_id)
 		
 	else:
 		waiting_for_tap = true
@@ -109,18 +150,23 @@ func _make_choice_button(text: String) -> Button:
 	
 	return btn
 	
+func advance() -> void:
+	if not visible or choices_box.visible:
+		return
+
+	if is_typing:
+		dialogue_label.visible_ratio = 1.0
+		is_typing = false
+
+	elif waiting_for_tap:
+		waiting_for_tap = false
+		_next(current_line.next_id)
+
 func _unhandled_input(event: InputEvent) -> void:
 	if not visible or choices_box.visible:
 		return
-		
+
 	# Handle input
 	if event.is_action_pressed("ui_accept") or (event is InputEventScreenTouch and event.pressed):
-		if is_typing:
-			dialogue_label.visible_ratio = 1.0
-			is_typing = false
-			
-		elif waiting_for_tap:
-			waiting_for_tap = false
-			_next(current_line.next_id)
-			
+		advance()
 		get_viewport().set_input_as_handled()

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cwvm0m74eg8de"]
 
+[ext_resource type="Script" uid="uid://dkjnqw54mho6" path="res://logic/ui/dialogue/dialogue_menu.gd" id="1_n11k8"]
 [ext_resource type="Texture2D" uid="uid://bv1k5hv3gh5vl" path="res://assets/textures/ui/game/button/btn_light_continue_idle.png" id="1_rwbh0"]
 [ext_resource type="Texture2D" uid="uid://vl7gekawp00y" path="res://assets/textures/ui/game/button/btn_light_continue_hover.png" id="2_nid1w"]
 [ext_resource type="Texture2D" uid="uid://b6knh0f5wcekm" path="res://assets/textures/ui/game/button/btn_light_skip_idle.png" id="3_qjcf6"]
@@ -74,6 +75,7 @@ offset_left = 1440.0
 offset_bottom = 128.0
 grow_horizontal = 2
 theme_override_constants/separation = 16
+script = ExtResource("1_n11k8")
 
 [node name="Continue" type="Button" parent="." unique_id=1074409738]
 custom_minimum_size = Vector2(64, 64)
@@ -128,3 +130,10 @@ size_flags_vertical = 4
 theme_override_styles/normal = SubResource("StyleBoxTexture_qai3m")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_5a376")
 theme_override_styles/hover = SubResource("StyleBoxTexture_7ceu8")
+
+[connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="Skip" to="." method="_on_skip_pressed"]
+[connection signal="pressed" from="Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="History" to="." method="_on_history_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
