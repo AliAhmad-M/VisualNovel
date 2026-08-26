@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cedxvolybqtf3"]
+
+[ext_resource type="Script" uid="uid://d3ach5parryqy" path="res://logic/ui/character/character_stage.gd" id="1_6fbgj"]
+[ext_resource type="Script" uid="uid://o1b5kf5okdd1" path="res://logic/ui/character/character_portrait.gd" id="2_58psd"]
+[ext_resource type="Texture2D" uid="uid://dqcwpas1vh7gj" path="res://assets/textures/characters/debug/char_debug_1.png" id="3_httim"]
+
+[sub_resource type="Resource" id="Resource_0xm2m"]
+script = ExtResource("2_58psd")
+character_name = "Debug"
+texture = ExtResource("3_httim")
+metadata/_custom_type_script = "uid://o1b5kf5okdd1"
+
+[node name="CharacterStage" type="Control" unique_id=1262265244]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_6fbgj")
+portrait_entries = Array[ExtResource("2_58psd")]([SubResource("Resource_0xm2m")])
+
+[node name="Slot" type="TextureRect" parent="." unique_id=1915022763]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -579.0
+offset_top = -643.5
+offset_right = 579.0
+offset_bottom = 643.5
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 42)
+offset_transform_scale = Vector2(0.4, 0.4)
+mouse_filter = 2
+texture = ExtResource("3_httim")

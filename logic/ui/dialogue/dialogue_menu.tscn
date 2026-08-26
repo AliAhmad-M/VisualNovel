@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://cwvm0m74eg8de"]
+
+[ext_resource type="Texture2D" uid="uid://bv1k5hv3gh5vl" path="res://assets/textures/ui/game/button/btn_light_continue_idle.png" id="1_rwbh0"]
+[ext_resource type="Texture2D" uid="uid://vl7gekawp00y" path="res://assets/textures/ui/game/button/btn_light_continue_hover.png" id="2_nid1w"]
+[ext_resource type="Texture2D" uid="uid://b6knh0f5wcekm" path="res://assets/textures/ui/game/button/btn_light_skip_idle.png" id="3_qjcf6"]
+[ext_resource type="Texture2D" uid="uid://cjvof07flbmom" path="res://assets/textures/ui/game/button/btn_light_skip_hover.png" id="4_cpy3p"]
+[ext_resource type="Texture2D" uid="uid://dw3a2q1q0ngtu" path="res://assets/textures/ui/game/button/btn_light_save_idle.png" id="5_git30"]
+[ext_resource type="Texture2D" uid="uid://dr4ieyrmvl61y" path="res://assets/textures/ui/game/button/btn_light_save_hover.png" id="6_cr25h"]
+[ext_resource type="Texture2D" uid="uid://bliis6vf2orvk" path="res://assets/textures/ui/game/button/btn_light_load_idle.png" id="7_jg31d"]
+[ext_resource type="Texture2D" uid="uid://bjyehi0x0p3il" path="res://assets/textures/ui/game/button/btn_light_load_hover.png" id="8_wrn2c"]
+[ext_resource type="Texture2D" uid="uid://b7jop3jd4m17m" path="res://assets/textures/ui/game/button/btn_light_history_idle.png" id="9_pvjdk"]
+[ext_resource type="Texture2D" uid="uid://b1lodekuw56n5" path="res://assets/textures/ui/game/button/btn_light_history_hover.png" id="10_wk816"]
+[ext_resource type="Texture2D" uid="uid://cbny0alxy2a55" path="res://assets/textures/ui/game/button/btn_light_options_idle.png" id="11_bfxpk"]
+[ext_resource type="Texture2D" uid="uid://bs41pw8alic0k" path="res://assets/textures/ui/game/button/btn_light_options_hover.png" id="12_iqjm8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ta5wa"]
+texture = ExtResource("1_rwbh0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lwnhx"]
+texture = ExtResource("2_nid1w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0wk50"]
+texture = ExtResource("2_nid1w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eadei"]
+texture = ExtResource("3_qjcf6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_16ice"]
+texture = ExtResource("4_cpy3p")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vv67y"]
+texture = ExtResource("4_cpy3p")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ql2ml"]
+texture = ExtResource("5_git30")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i3lwt"]
+texture = ExtResource("6_cr25h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2w4hk"]
+texture = ExtResource("6_cr25h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wqhpv"]
+texture = ExtResource("7_jg31d")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_36f4x"]
+texture = ExtResource("8_wrn2c")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kn4e6"]
+texture = ExtResource("8_wrn2c")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yfy0l"]
+texture = ExtResource("9_pvjdk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vd8sn"]
+texture = ExtResource("10_wk816")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gw0ge"]
+texture = ExtResource("10_wk816")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qai3m"]
+texture = ExtResource("11_bfxpk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5a376"]
+texture = ExtResource("12_iqjm8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7ceu8"]
+texture = ExtResource("12_iqjm8")
+
+[node name="DialogueMenu" type="HBoxContainer" unique_id=721267030]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 1440.0
+offset_bottom = 128.0
+grow_horizontal = 2
+theme_override_constants/separation = 16
+
+[node name="Continue" type="Button" parent="." unique_id=1074409738]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_ta5wa")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lwnhx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0wk50")
+
+[node name="Skip" type="Button" parent="." unique_id=765792773]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_eadei")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_16ice")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vv67y")
+
+[node name="Save" type="Button" parent="." unique_id=1362505455]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_ql2ml")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_i3lwt")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2w4hk")
+
+[node name="Load" type="Button" parent="." unique_id=2033678241]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_wqhpv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_36f4x")
+theme_override_styles/hover = SubResource("StyleBoxTexture_kn4e6")
+
+[node name="History" type="Button" parent="." unique_id=1521681567]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_yfy0l")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_vd8sn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gw0ge")
+
+[node name="Options" type="Button" parent="." unique_id=279224576]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_qai3m")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5a376")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7ceu8")
