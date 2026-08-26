@@ -55,7 +55,7 @@ func _show_line(line: DialogueLine) -> void:
 	
 	# Display speaker name
 	name_label.text = line.character
-	character_stage.show_speaker(line.character)
+	character_stage.show_speaker(line.character, line.get_tag_value("mood"))
 	
 	# Display dialogue line
 	dialogue_label.dialogue_line = line

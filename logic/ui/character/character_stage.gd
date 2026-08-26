@@ -15,36 +15,52 @@ var _rest_x: float
 func _ready() -> void:
 	# Initialize portraits
 	for entry in portrait_entries:
-		portraits[entry.character_name] = entry.texture
-		
+		portraits[entry.character_name] = entry
+
 	_rest_x = slot.position.x
 	slot.modulate.a = 0.0
 	slot.position.x = _enter_x()
 
-func show_speaker(character_name: String) -> void:
+func show_speaker(character_name: String, expression: String = "") -> void:
 	# No character sprite (e.g. narrator)
 	if not portraits.has(character_name):
 		return
-	
-	# Character already in the scene
+
+	var portrait: CharacterPortrait = portraits[character_name]
+	var texture: Texture2D = null
+	if expression != "":
+		texture = portrait.get_texture(expression)
+
+	# No or invalid expression
+	if texture == null:
+		# Show previous expression if exists
+		if character_name == _current_character:
+			texture = slot.texture
+
+		# Otherwise show default expression
+		else:
+			texture = portrait.get_texture("default")
+
+	# Character already in the scene — just update the expression in place
 	if character_name == _current_character:
+		slot.texture = texture
 		return
-		
+
 	# Slide in the first character
 	if _current_character == "":
-		_slide_in(character_name)
-	
+		_slide_in(character_name, texture)
+
 	# Swap to new character otherwise
 	else:
-		_swap_to(character_name)
+		_swap_to(character_name, texture)
 
 func clear_all() -> void:
 	# End of scene
 	if _current_character != "":
 		await _slide_out()
 
-func _slide_in(character_name: String) -> void:
-	slot.texture = portraits[character_name]
+func _slide_in(character_name: String, texture: Texture2D) -> void:
+	slot.texture = texture
 	slot.position.x = _enter_x()
 	_current_character = character_name
 
@@ -64,11 +80,10 @@ func _slide_out() -> void:
 	tw.tween_property(slot, "modulate:a", 0.0, slide_time)
 	await tw.finished
 
-
-func _swap_to(character_name: String) -> void:
+func _swap_to(character_name: String, texture: Texture2D) -> void:
 	# Slide out old character, slide in new one
 	await _slide_out()
-	_slide_in(character_name)
+	_slide_in(character_name, texture)
 
 func _enter_x() -> float:
 	return get_viewport_rect().size.x

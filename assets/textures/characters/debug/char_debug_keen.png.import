@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bis4g320qkptl"
-path="res://.godot/imported/char_debug_9.png-e74f2c3facccf808d169cf3abf04318b.ctex"
+uid="uid://ctmycr18n834u"
+path="res://.godot/imported/char_debug_keen.png-0d5649ca26c662b4ff3ead0539d8f1f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/characters/debug/char_debug_9.png"
-dest_files=["res://.godot/imported/char_debug_9.png-e74f2c3facccf808d169cf3abf04318b.ctex"]
+source_file="res://assets/textures/characters/debug/char_debug_keen.png"
+dest_files=["res://.godot/imported/char_debug_keen.png-0d5649ca26c662b4ff3ead0539d8f1f0.ctex"]
 
 [params]
 

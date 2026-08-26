@@ -2,12 +2,80 @@
 
 [ext_resource type="Script" uid="uid://d3ach5parryqy" path="res://logic/ui/character/character_stage.gd" id="1_6fbgj"]
 [ext_resource type="Script" uid="uid://o1b5kf5okdd1" path="res://logic/ui/character/character_portrait.gd" id="2_58psd"]
-[ext_resource type="Texture2D" uid="uid://dqcwpas1vh7gj" path="res://assets/textures/characters/debug/char_debug_1.png" id="3_httim"]
+[ext_resource type="Script" uid="uid://bgpwik0iic747" path="res://logic/ui/character/character_expression.gd" id="3_6nigo"]
+[ext_resource type="Texture2D" uid="uid://dqcwpas1vh7gj" path="res://assets/textures/characters/debug/char_debug_default.png" id="3_httim"]
+[ext_resource type="Texture2D" uid="uid://ceegrnnwgry6d" path="res://assets/textures/characters/debug/char_debug_smile.png" id="5_xmccb"]
+[ext_resource type="Texture2D" uid="uid://da3et8jf2jdji" path="res://assets/textures/characters/debug/char_debug_grin.png" id="6_0g0uj"]
+[ext_resource type="Texture2D" uid="uid://cx4fiq24owmcf" path="res://assets/textures/characters/debug/char_debug_happy.png" id="7_l1dkc"]
+[ext_resource type="Texture2D" uid="uid://cnuuuby30rqt8" path="res://assets/textures/characters/debug/char_debug_neutral.png" id="8_v4gff"]
+[ext_resource type="Texture2D" uid="uid://djfscyq2wvdmi" path="res://assets/textures/characters/debug/char_debug_frown.png" id="9_ns7u1"]
+[ext_resource type="Texture2D" uid="uid://bis4g320qkptl" path="res://assets/textures/characters/debug/char_debug_angry.png" id="10_ycqsq"]
+[ext_resource type="Texture2D" uid="uid://baxer0o4mcdbj" path="res://assets/textures/characters/debug/char_debug_sad.png" id="11_ljcf3"]
+[ext_resource type="Texture2D" uid="uid://do50whdaanhf5" path="res://assets/textures/characters/debug/char_debug_shock.png" id="12_ded3a"]
+
+[sub_resource type="Resource" id="Resource_nes3t"]
+script = ExtResource("3_6nigo")
+texture = ExtResource("3_httim")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_h7afy"]
+script = ExtResource("3_6nigo")
+expression_name = "smile"
+texture = ExtResource("5_xmccb")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_opx2q"]
+script = ExtResource("3_6nigo")
+expression_name = "grin"
+texture = ExtResource("6_0g0uj")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_0aw32"]
+script = ExtResource("3_6nigo")
+expression_name = "happy"
+texture = ExtResource("7_l1dkc")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_c7yqp"]
+script = ExtResource("3_6nigo")
+expression_name = "neutral"
+texture = ExtResource("8_v4gff")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_johyd"]
+script = ExtResource("3_6nigo")
+expression_name = "frown"
+texture = ExtResource("9_ns7u1")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_q6i2g"]
+script = ExtResource("3_6nigo")
+expression_name = "angry"
+texture = ExtResource("10_ycqsq")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_xmccb"]
+script = ExtResource("3_6nigo")
+expression_name = "sad"
+texture = ExtResource("11_ljcf3")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_0g0uj"]
+script = ExtResource("3_6nigo")
+expression_name = "neutral"
+texture = ExtResource("8_v4gff")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_l1dkc"]
+script = ExtResource("3_6nigo")
+expression_name = "shock"
+texture = ExtResource("12_ded3a")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
 
 [sub_resource type="Resource" id="Resource_0xm2m"]
 script = ExtResource("2_58psd")
 character_name = "Debug"
-texture = ExtResource("3_httim")
+expressions = Array[ExtResource("3_6nigo")]([SubResource("Resource_nes3t"), SubResource("Resource_h7afy"), SubResource("Resource_opx2q"), SubResource("Resource_0aw32"), SubResource("Resource_c7yqp"), SubResource("Resource_johyd"), SubResource("Resource_q6i2g"), SubResource("Resource_xmccb"), SubResource("Resource_0g0uj"), SubResource("Resource_l1dkc")])
 metadata/_custom_type_script = "uid://o1b5kf5okdd1"
 
 [node name="CharacterStage" type="Control" unique_id=1262265244]

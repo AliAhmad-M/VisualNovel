@@ -2,10 +2,10 @@
 Debug: [[Hi|Hello|Howdy]], this is some dialogue.
 Debug: Here are some choices.
 - First one
-	Debug: You picked the first one.
+	Debug [#mood=happy]: You picked the first one.
 - Second one
-	Debug: You picked the second one.
+	Debug [#mood=smile]: You picked the second one.
 - Start again => start
 - End the conversation => END
-Debug: For more information see the online documentation.
+Debug [#mood=neutral]: For more information see the online documentation.
 => END
