@@ -13,60 +13,18 @@
 [ext_resource type="Texture2D" uid="uid://b1lodekuw56n5" path="res://assets/textures/ui/game/button/btn_light_history_hover.png" id="10_wk816"]
 [ext_resource type="Texture2D" uid="uid://cbny0alxy2a55" path="res://assets/textures/ui/game/button/btn_light_options_idle.png" id="11_bfxpk"]
 [ext_resource type="Texture2D" uid="uid://bs41pw8alic0k" path="res://assets/textures/ui/game/button/btn_light_options_hover.png" id="12_iqjm8"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ta5wa"]
-texture = ExtResource("1_rwbh0")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lwnhx"]
-texture = ExtResource("2_nid1w")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0wk50"]
-texture = ExtResource("2_nid1w")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eadei"]
-texture = ExtResource("3_qjcf6")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_16ice"]
-texture = ExtResource("4_cpy3p")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vv67y"]
-texture = ExtResource("4_cpy3p")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ql2ml"]
-texture = ExtResource("5_git30")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i3lwt"]
-texture = ExtResource("6_cr25h")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2w4hk"]
-texture = ExtResource("6_cr25h")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wqhpv"]
-texture = ExtResource("7_jg31d")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_36f4x"]
-texture = ExtResource("8_wrn2c")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kn4e6"]
-texture = ExtResource("8_wrn2c")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yfy0l"]
-texture = ExtResource("9_pvjdk")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vd8sn"]
-texture = ExtResource("10_wk816")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gw0ge"]
-texture = ExtResource("10_wk816")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qai3m"]
-texture = ExtResource("11_bfxpk")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5a376"]
-texture = ExtResource("12_iqjm8")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7ceu8"]
-texture = ExtResource("12_iqjm8")
+[ext_resource type="Texture2D" uid="uid://bvtx5i044bdni" path="res://assets/textures/ui/game/button/btn_dark_continue_idle.png" id="14_nf5va"]
+[ext_resource type="Texture2D" uid="uid://b5yjj7rdlavv7" path="res://assets/textures/ui/game/button/btn_dark_continue_hover.png" id="15_5nkua"]
+[ext_resource type="Texture2D" uid="uid://eirxe6qck208" path="res://assets/textures/ui/game/button/btn_dark_skip_idle.png" id="16_rixm3"]
+[ext_resource type="Texture2D" uid="uid://cppmf37g0dcvu" path="res://assets/textures/ui/game/button/btn_dark_skip_hover.png" id="17_m12r4"]
+[ext_resource type="Texture2D" uid="uid://b8yp6hw6p0ef3" path="res://assets/textures/ui/game/button/btn_dark_save_idle.png" id="18_3krew"]
+[ext_resource type="Texture2D" uid="uid://bluy3fh1lto1g" path="res://assets/textures/ui/game/button/btn_dark_save_hover.png" id="19_buocn"]
+[ext_resource type="Texture2D" uid="uid://bayydig2vxyxg" path="res://assets/textures/ui/game/button/btn_dark_load_idle.png" id="20_8sjop"]
+[ext_resource type="Texture2D" uid="uid://ewpoe4bptnij" path="res://assets/textures/ui/game/button/btn_dark_load_hover.png" id="21_vy3w7"]
+[ext_resource type="Texture2D" uid="uid://drerq35umtctw" path="res://assets/textures/ui/game/button/btn_dark_history_idle.png" id="22_t2vd1"]
+[ext_resource type="Texture2D" uid="uid://cket1cqxnwbee" path="res://assets/textures/ui/game/button/btn_dark_history_hover.png" id="23_pu5ps"]
+[ext_resource type="Texture2D" uid="uid://61s27go38u04" path="res://assets/textures/ui/game/button/btn_dark_options_idle.png" id="24_6iw3s"]
+[ext_resource type="Texture2D" uid="uid://bt5iun2iyypmm" path="res://assets/textures/ui/game/button/btn_dark_options_hover.png" id="25_g6qso"]
 
 [node name="DialogueMenu" type="HBoxContainer" unique_id=721267030]
 anchors_preset = 10
@@ -76,60 +34,96 @@ offset_bottom = 128.0
 grow_horizontal = 2
 theme_override_constants/separation = 16
 script = ExtResource("1_n11k8")
+continue_normal_tex_light = ExtResource("1_rwbh0")
+continue_hover_tex_light = ExtResource("2_nid1w")
+continue_pressed_tex_light = ExtResource("2_nid1w")
+skip_normal_tex_light = ExtResource("3_qjcf6")
+skip_hover_tex_light = ExtResource("4_cpy3p")
+skip_pressed_tex_light = ExtResource("4_cpy3p")
+save_normal_tex_light = ExtResource("5_git30")
+save_hover_tex_light = ExtResource("6_cr25h")
+save_pressed_tex_light = ExtResource("6_cr25h")
+load_normal_tex_light = ExtResource("7_jg31d")
+load_hover_tex_light = ExtResource("8_wrn2c")
+load_pressed_tex_light = ExtResource("8_wrn2c")
+history_normal_tex_light = ExtResource("9_pvjdk")
+history_hover_tex_light = ExtResource("10_wk816")
+history_pressed_tex_light = ExtResource("10_wk816")
+options_normal_tex_light = ExtResource("11_bfxpk")
+options_hover_tex_light = ExtResource("12_iqjm8")
+options_pressed_tex_light = ExtResource("12_iqjm8")
+continue_normal_tex_dark = ExtResource("14_nf5va")
+continue_hover_tex_dark = ExtResource("15_5nkua")
+continue_pressed_tex_dark = ExtResource("15_5nkua")
+skip_normal_tex_dark = ExtResource("16_rixm3")
+skip_hover_tex_dark = ExtResource("17_m12r4")
+skip_pressed_tex_dark = ExtResource("17_m12r4")
+save_normal_tex_dark = ExtResource("18_3krew")
+save_hover_tex_dark = ExtResource("19_buocn")
+save_pressed_tex_dark = ExtResource("19_buocn")
+load_normal_tex_dark = ExtResource("20_8sjop")
+load_hover_tex_dark = ExtResource("21_vy3w7")
+load_pressed_tex_dark = ExtResource("21_vy3w7")
+history_normal_tex_dark = ExtResource("22_t2vd1")
+history_hover_tex_dark = ExtResource("23_pu5ps")
+history_pressed_tex_dark = ExtResource("23_pu5ps")
+options_normal_tex_dark = ExtResource("24_6iw3s")
+options_hover_tex_dark = ExtResource("25_g6qso")
+options_pressed_tex_dark = ExtResource("25_g6qso")
 
-[node name="Continue" type="Button" parent="." unique_id=1074409738]
+[node name="Continue" type="TextureButton" parent="." unique_id=862982448]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_styles/normal = SubResource("StyleBoxTexture_ta5wa")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_lwnhx")
-theme_override_styles/hover = SubResource("StyleBoxTexture_0wk50")
+texture_normal = ExtResource("1_rwbh0")
+texture_pressed = ExtResource("2_nid1w")
+texture_hover = ExtResource("2_nid1w")
 
-[node name="Skip" type="Button" parent="." unique_id=765792773]
+[node name="Skip" type="TextureButton" parent="." unique_id=1358482469]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_styles/normal = SubResource("StyleBoxTexture_eadei")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_16ice")
-theme_override_styles/hover = SubResource("StyleBoxTexture_vv67y")
+texture_normal = ExtResource("3_qjcf6")
+texture_pressed = ExtResource("4_cpy3p")
+texture_hover = ExtResource("4_cpy3p")
 
-[node name="Save" type="Button" parent="." unique_id=1362505455]
+[node name="Save" type="TextureButton" parent="." unique_id=577419971]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_styles/normal = SubResource("StyleBoxTexture_ql2ml")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_i3lwt")
-theme_override_styles/hover = SubResource("StyleBoxTexture_2w4hk")
+texture_normal = ExtResource("5_git30")
+texture_pressed = ExtResource("6_cr25h")
+texture_hover = ExtResource("6_cr25h")
 
-[node name="Load" type="Button" parent="." unique_id=2033678241]
+[node name="Load" type="TextureButton" parent="." unique_id=1066824236]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_styles/normal = SubResource("StyleBoxTexture_wqhpv")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_36f4x")
-theme_override_styles/hover = SubResource("StyleBoxTexture_kn4e6")
+texture_normal = ExtResource("7_jg31d")
+texture_pressed = ExtResource("8_wrn2c")
+texture_hover = ExtResource("8_wrn2c")
 
-[node name="History" type="Button" parent="." unique_id=1521681567]
+[node name="History" type="TextureButton" parent="." unique_id=943444455]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_styles/normal = SubResource("StyleBoxTexture_yfy0l")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_vd8sn")
-theme_override_styles/hover = SubResource("StyleBoxTexture_gw0ge")
+texture_normal = ExtResource("9_pvjdk")
+texture_pressed = ExtResource("10_wk816")
+texture_hover = ExtResource("10_wk816")
 
-[node name="Options" type="Button" parent="." unique_id=279224576]
+[node name="Options" type="TextureButton" parent="." unique_id=819655461]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_styles/normal = SubResource("StyleBoxTexture_qai3m")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_5a376")
-theme_override_styles/hover = SubResource("StyleBoxTexture_7ceu8")
+texture_normal = ExtResource("11_bfxpk")
+texture_pressed = ExtResource("12_iqjm8")
+texture_hover = ExtResource("12_iqjm8")
 
 [connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="Skip" to="." method="_on_skip_pressed"]

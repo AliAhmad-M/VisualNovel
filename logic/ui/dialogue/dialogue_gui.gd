@@ -1,16 +1,34 @@
 extends Control
 
-@export var choice_normal_tex: Texture2D
-@export var choice_hover_tex: Texture2D
-@export var choice_pressed_tex: Texture2D
+@export_category("Dialogue Box")
+@export_subgroup("Light Mode")
+@export var dialogue_box_tex_light: Texture2D
 
-@onready var name_label: Label = $DialogueTexture/NameLabel
-@onready var dialogue_label: DialogueLabel = $DialogueTexture/DialogueLabel
-@onready var choices_box: VBoxContainer = $DialogueTexture/ChoicesBox
+@export_subgroup("Dark Mode")
+@export var dialogue_box_tex_dark: Texture2D
+
+@export_category("Choice Buttons")
+@export_subgroup("Light Mode")
+@export var choice_normal_tex_light: Texture2D
+@export var choice_hover_tex_light: Texture2D
+@export var choice_pressed_tex_light: Texture2D
+
+@export_subgroup("Dark Mode")
+@export var choice_normal_tex_dark: Texture2D
+@export var choice_hover_tex_dark: Texture2D
+@export var choice_pressed_tex_dark: Texture2D
+
+@onready var dialogue_box: TextureRect = $DialogueBox
+@onready var name_label: Label = $DialogueBox/NameLabel
+@onready var dialogue_label: DialogueLabel = $DialogueBox/DialogueLabel
+@onready var choices_box: VBoxContainer = $DialogueBox/ChoicesBox
 @onready var character_stage: CharacterStage = $CharacterStage
 @onready var dialogue_menu: DialogueMenu = $DialogueMenu
 
 var resource: DialogueResource
+var text_font: Font
+var text_color: Color
+
 var current_line: DialogueLine
 var is_typing: bool = false
 var waiting_for_tap: bool = false
@@ -23,18 +41,40 @@ var choice_button_w: float
 var choice_button_h: float
 
 func _ready() -> void:
+	# Connect to theme changes and set initial values
+	if Settings:
+		Settings.theme_changed.connect(_on_theme_changed)
+		_update_theme(Settings.dark_mode)
+
 	# Connect signals to labels
 	dialogue_label.started_typing.connect(func(): is_typing = true)
 	dialogue_label.finished_typing.connect(func(): is_typing = false)
 
+	# Load the font
+	text_font = load("res://assets/fonts/font_xtypewriter_regular.ttf")
+
 	# Configure the choice buttons
 	choices_box_base_y = choices_box.position.y
-	choice_button_w = choice_normal_tex.get_size().x * 0.5
-	choice_button_h = choice_normal_tex.get_size().y * 0.7
+	choice_button_w = choice_normal_tex_light.get_size().x * 0.55
+	choice_button_h = choice_normal_tex_light.get_size().y * 0.75
 
 	# Menu
 	dialogue_menu.continue_pressed.connect(advance)
 	dialogue_menu.skip_pressed.connect(toggle_skip)
+
+func _on_theme_changed(is_dark_mode: bool) -> void:
+	_update_theme(is_dark_mode)
+
+func _update_theme(is_dark: bool) -> void:
+	# Update box texture & text color
+	dialogue_box.texture = dialogue_box_tex_dark if is_dark else dialogue_box_tex_light
+	text_color = Color.WHITE if is_dark else Color.BLACK
+	dialogue_label.add_theme_color_override("default_color", text_color)
+	
+	# Update active choice buttons on screen if there are any
+	for child in choices_box.get_children():
+		if child is Button:
+			_apply_button_theme(child)
 
 func toggle_skip() -> void:
 	is_skipping = not is_skipping
@@ -123,33 +163,36 @@ func _make_choice_button(text: String) -> Button:
 	var btn := Button.new()
 	btn.text = text
 	
-	# Add textures for button
+	# Set base settings
+	btn.custom_minimum_size = Vector2(choice_button_w, choice_button_h)
+	btn.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	btn.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	btn.add_theme_font_override("font", load("res://assets/fonts/font_xtypewriter_regular.ttf"))
+	btn.add_theme_font_size_override("font_size", 24)
+	
+	# Apply stylebox and colors
+	_apply_button_theme(btn)
+	
+	return btn
+
+func _apply_button_theme(btn: Button) -> void:
 	var sb_normal := StyleBoxTexture.new()
-	sb_normal.texture = choice_normal_tex
+	sb_normal.texture = choice_normal_tex_dark if Settings.dark_mode else choice_normal_tex_light
 	var sb_hover := StyleBoxTexture.new()
-	sb_hover.texture = choice_hover_tex
+	sb_hover.texture = choice_hover_tex_dark if Settings.dark_mode else choice_hover_tex_light
 	var sb_pressed := StyleBoxTexture.new()
-	sb_pressed.texture = choice_pressed_tex
+	sb_pressed.texture = choice_pressed_tex_dark if Settings.dark_mode else choice_pressed_tex_light
 	
 	btn.add_theme_stylebox_override("normal", sb_normal)
 	btn.add_theme_stylebox_override("hover", sb_hover)
 	btn.add_theme_stylebox_override("pressed", sb_pressed)
 	btn.add_theme_stylebox_override("focus", sb_hover)
 	
-	# Set texture size
-	btn.custom_minimum_size = Vector2(choice_button_w, choice_button_h)
-	btn.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	btn.size_flags_vertical = Control.SIZE_SHRINK_CENTER
-	
-	# Configure font
-	btn.add_theme_color_override("font_color", Color.BLACK)
-	btn.add_theme_color_override("font_hover_color", Color.BLACK)
-	btn.add_theme_color_override("font_pressed_color", Color.BLACK)
-	btn.add_theme_color_override("font_focus_color", Color.BLACK)
-	btn.add_theme_font_size_override("font_size", 24)
-	
-	return btn
-	
+	btn.add_theme_color_override("font_color", text_color)
+	btn.add_theme_color_override("font_hover_color", text_color)
+	btn.add_theme_color_override("font_pressed_color", text_color)
+	btn.add_theme_color_override("font_focus_color", text_color)
+
 func advance() -> void:
 	if not visible or choices_box.visible:
 		return
