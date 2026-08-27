@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://ckv66g64ws3vl" path="res://logic/ui/dialogue/dialogue_gui.gd" id="1_awdpu"]
 [ext_resource type="Texture2D" uid="uid://bc1a65vpnwup6" path="res://assets/textures/ui/game/choice/choice_light_idle.png" id="2_n7orp"]
+[ext_resource type="Script" uid="uid://c8ixy2rt40j63" path="res://logic/minigame/minigame_entry.gd" id="2_p3yad"]
+[ext_resource type="PackedScene" uid="uid://dppeltx3yoetr" path="res://logic/minigame/levels/empty.tscn" id="3_hxxqu"]
 [ext_resource type="Texture2D" uid="uid://boeaok7o0rqqh" path="res://assets/textures/ui/game/choice/choice_light_hover.png" id="3_j63ba"]
 [ext_resource type="Texture2D" uid="uid://3ui3xct0p8um" path="res://assets/textures/ui/game/dialogue/dialoguebox_dark_red.png" id="3_n7orp"]
 [ext_resource type="Texture2D" uid="uid://bg2bssysacwsl" path="res://assets/textures/ui/game/dialogue/dialoguebox_light_red.png" id="4_ribjw"]
@@ -12,6 +14,13 @@
 [ext_resource type="Texture2D" uid="uid://cyhl2rlvavr4g" path="res://assets/textures/ui/game/choice/choice_dark_idle.png" id="6_pcx7q"]
 [ext_resource type="PackedScene" uid="uid://cedxvolybqtf3" path="res://logic/ui/character/character_stage.tscn" id="7_awdpu"]
 [ext_resource type="Texture2D" uid="uid://b5a53dt7fctku" path="res://assets/textures/ui/game/choice/choice_dark_hover.png" id="7_tl4t0"]
+[ext_resource type="PackedScene" uid="uid://b7a62xd7b7uym" path="res://logic/ui/minigame/minigame_display.tscn" id="13_tl4t0"]
+
+[sub_resource type="Resource" id="Resource_vf1uc"]
+script = ExtResource("2_p3yad")
+minigame_id = "empty"
+scene = ExtResource("3_hxxqu")
+metadata/_custom_type_script = "uid://c8ixy2rt40j63"
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3sid0"]
 
@@ -23,6 +32,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_awdpu")
+minigame_entries = Array[ExtResource("2_p3yad")]([SubResource("Resource_vf1uc")])
 dialogue_box_tex_light = ExtResource("4_ribjw")
 dialogue_box_tex_dark = ExtResource("3_n7orp")
 choice_normal_tex_light = ExtResource("2_n7orp")
@@ -80,6 +90,15 @@ offset_top = -96.0
 offset_right = 1180.0
 offset_bottom = 4.0
 theme_override_constants/separation = 8
+
+[node name="MinigameDisplay" parent="." unique_id=683539485 instance=ExtResource("13_tl4t0")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_bottom = 128.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="DialogueMenu" parent="." unique_id=721267030 instance=ExtResource("6_0di04")]
 layout_mode = 1

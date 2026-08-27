@@ -1,13 +1,16 @@
 extends Control
 
-@export_category("Dialogue Box")
+@export_category("Minigames")
+@export var minigame_entries: Array[MinigameEntry] = []
+
+@export_category("Dialogue Box Textures")
 @export_subgroup("Light Mode")
 @export var dialogue_box_tex_light: Texture2D
 
 @export_subgroup("Dark Mode")
 @export var dialogue_box_tex_dark: Texture2D
 
-@export_category("Choice Buttons")
+@export_category("Choice Button Textures")
 @export_subgroup("Light Mode")
 @export var choice_normal_tex_light: Texture2D
 @export var choice_hover_tex_light: Texture2D
@@ -24,6 +27,7 @@ extends Control
 @onready var choices_box: VBoxContainer = $DialogueBox/ChoicesBox
 @onready var character_stage: CharacterStage = $CharacterStage
 @onready var dialogue_menu: DialogueMenu = $DialogueMenu
+@onready var minigame_display: MinigameDisplay = $MinigameDisplay
 
 var resource: DialogueResource
 var text_font: Font
@@ -36,11 +40,18 @@ var waiting_for_tap: bool = false
 var is_skipping: bool = false
 var _last_speaker: String = ""
 
+var minigame_active: bool = false
+var _minigames: Dictionary = {}
+
 var choices_box_base_y: float
 var choice_button_w: float
 var choice_button_h: float
 
 func _ready() -> void:
+	# Initialize all minigames
+	for entry in minigame_entries:
+		_minigames[entry.minigame_id] = entry.scene
+	
 	# Connect to theme changes and set initial values
 	if Settings:
 		Settings.theme_changed.connect(_on_theme_changed)
@@ -61,7 +72,10 @@ func _ready() -> void:
 	# Menu
 	dialogue_menu.continue_pressed.connect(advance)
 	dialogue_menu.skip_pressed.connect(toggle_skip)
-
+	
+	# Minigame
+	minigame_display.minigame_finished.connect(_on_minigame_finished)
+	
 func _on_theme_changed(is_dark_mode: bool) -> void:
 	_update_theme(is_dark_mode)
 
@@ -91,7 +105,7 @@ func toggle_skip() -> void:
 		
 	elif waiting_for_tap:
 		waiting_for_tap = false
-		_next(current_line.next_id)
+		_advance_past_current_line()
 	
 func start(dialogue_resource: DialogueResource, cue: String = "", extra_game_states: Array = []) -> void:
 	resource = dialogue_resource
@@ -112,6 +126,19 @@ func _next(cue: String, extra_game_states: Array = []) -> void:
 	
 	# Display the line
 	_show_line(current_line)
+	
+func _advance_past_current_line() -> void:
+	# Launch minigame if there is one
+	var minigame_id := current_line.get_tag_value("minigame")
+	if minigame_id != "":
+		var scene: PackedScene = _minigames.get(minigame_id)
+		if scene:
+			is_skipping = false
+			start_minigame(scene)
+			return
+		else:
+			push_warning("No minigame registered for id: '%s'" % minigame_id)
+	_next(current_line.next_id)
 	
 func _show_line(line: DialogueLine) -> void:
 	# Skip stops the moment the speaker changes
@@ -153,8 +180,7 @@ func _show_line(line: DialogueLine) -> void:
 		choices_box.visible = true
 		
 	elif is_skipping:
-		# keep chaining
-		_next(current_line.next_id)
+		_advance_past_current_line()
 		
 	else:
 		waiting_for_tap = true
@@ -194,7 +220,7 @@ func _apply_button_theme(btn: Button) -> void:
 	btn.add_theme_color_override("font_focus_color", text_color)
 
 func advance() -> void:
-	if not visible or choices_box.visible:
+	if not visible or choices_box.visible or minigame_active:
 		return
 
 	if is_typing:
@@ -203,10 +229,26 @@ func advance() -> void:
 
 	elif waiting_for_tap:
 		waiting_for_tap = false
-		_next(current_line.next_id)
+		_advance_past_current_line()
+		
+func start_minigame(minigame_scene: PackedScene) -> void:
+	minigame_active = true
+	_set_dialogue_ui_visible(false)
+	minigame_display.show_display()
+	minigame_display.load_minigame(minigame_scene)
+
+func _on_minigame_finished(_result: Variant) -> void:
+	minigame_display.hide_display()
+	_set_dialogue_ui_visible(true)
+	minigame_active = false
+	_next(current_line.next_id)
+
+func _set_dialogue_ui_visible(should_show: bool) -> void:
+	dialogue_box.visible = should_show
+	character_stage.visible = should_show
 
 func _unhandled_input(event: InputEvent) -> void:
-	if not visible or choices_box.visible:
+	if not visible or choices_box.visible or minigame_active:
 		return
 
 	# Handle input

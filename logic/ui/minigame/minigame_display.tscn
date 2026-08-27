@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b7a62xd7b7uym"]
+
+[ext_resource type="Texture2D" uid="uid://6htoq5o8vpxg" path="res://assets/textures/minigame/img_display.png" id="1_fkn15"]
+[ext_resource type="Script" uid="uid://cropxmlcy8j58" path="res://logic/ui/minigame/minigame_display.gd" id="1_lstx8"]
+
+[node name="MinigameDisplay" type="Control" unique_id=683539485]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lstx8")
+
+[node name="GameConsole" type="TextureRect" parent="." unique_id=1289398827]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_fkn15")
+
+[node name="Screen" type="Control" parent="GameConsole" unique_id=1089375444]
+anchors_preset = 0
+offset_left = 480.0
+offset_top = 220.0
+offset_right = 1440.0
+offset_bottom = 860.0
+offset_transform_enabled = true

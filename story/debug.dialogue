@@ -1,5 +1,7 @@
 ~ start
 Debug: [[Hi|Hello|Howdy]], this is some dialogue.
+Debug [#minigame=empty]: Here is a minigame.
+Debug: Nice job!
 Debug: Here are some choices.
 - First one
 	Debug [#mood=happy]: You picked the first one.
