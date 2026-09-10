@@ -48,6 +48,8 @@ var choice_button_w: float
 var choice_button_h: float
 
 func _ready() -> void:
+	add_to_group("dialogue_balloon")
+	
 	# Initialize all minigames
 	for entry in minigame_entries:
 		_minigames[entry.minigame_id] = entry.scene
@@ -72,6 +74,8 @@ func _ready() -> void:
 	# Menu
 	dialogue_menu.continue_pressed.connect(advance)
 	dialogue_menu.skip_pressed.connect(toggle_skip)
+	dialogue_menu.save_pressed.connect(SaveManager.save_game)
+	dialogue_menu.load_pressed.connect(SaveManager.load_game)
 	
 	# Minigame
 	minigame_display.minigame_finished.connect(_on_minigame_finished)
