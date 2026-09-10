@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dfekaiqmyevar"]
+
+[ext_resource type="Script" uid="uid://dq7kle0drvrg" path="res://logic/minigame/objects/key.gd" id="1_w6lsy"]
+[ext_resource type="Texture2D" uid="uid://yffm2yqvk8pm" path="res://assets/textures/minigame/img_tilemap.png" id="2_ci621"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qai3m"]
+size = Vector2(14, 12)
+
+[node name="Key" type="Node2D" unique_id=1880418237]
+texture_filter = 1
+script = ExtResource("1_w6lsy")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=727265025]
+texture = ExtResource("2_ci621")
+hframes = 20
+vframes = 20
+frame = 96
+
+[node name="Area" type="Area2D" parent="." unique_id=1557169772]
+
+[node name="Collider" type="CollisionShape2D" parent="Area" unique_id=136256649]
+shape = SubResource("RectangleShape2D_qai3m")
+
+[connection signal="body_entered" from="Area" to="." method="_on_area_body_entered"]

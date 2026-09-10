@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ckv66g64ws3vl" path="res://logic/ui/dialogue/dialogue_gui.gd" id="1_awdpu"]
 [ext_resource type="Texture2D" uid="uid://bc1a65vpnwup6" path="res://assets/textures/ui/game/choice/choice_light_idle.png" id="2_n7orp"]
 [ext_resource type="Script" uid="uid://c8ixy2rt40j63" path="res://logic/minigame/minigame_entry.gd" id="2_p3yad"]
-[ext_resource type="PackedScene" uid="uid://dppeltx3yoetr" path="res://logic/minigame/levels/empty.tscn" id="3_hxxqu"]
+[ext_resource type="PackedScene" uid="uid://dq4dbv40vj8rt" path="res://logic/minigame/levels/debug/debug.tscn" id="3_hxxqu"]
 [ext_resource type="Texture2D" uid="uid://boeaok7o0rqqh" path="res://assets/textures/ui/game/choice/choice_light_hover.png" id="3_j63ba"]
 [ext_resource type="Texture2D" uid="uid://3ui3xct0p8um" path="res://assets/textures/ui/game/dialogue/dialoguebox_dark_red.png" id="3_n7orp"]
 [ext_resource type="Texture2D" uid="uid://bg2bssysacwsl" path="res://assets/textures/ui/game/dialogue/dialoguebox_light_red.png" id="4_ribjw"]
@@ -18,7 +18,7 @@
 
 [sub_resource type="Resource" id="Resource_vf1uc"]
 script = ExtResource("2_p3yad")
-minigame_id = "empty"
+minigame_id = "debug"
 scene = ExtResource("3_hxxqu")
 metadata/_custom_type_script = "uid://c8ixy2rt40j63"
 

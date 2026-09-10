@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b0b0lm84agtk4"]
+
+[ext_resource type="Script" uid="uid://bowaiypukfjuh" path="res://logic/minigame/objects/box.gd" id="1_e587w"]
+[ext_resource type="Texture2D" uid="uid://yffm2yqvk8pm" path="res://assets/textures/minigame/img_tilemap.png" id="2_usxed"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qai3m"]
+size = Vector2(16, 16)
+
+[node name="Box" type="RigidBody2D" unique_id=923910564]
+texture_filter = 1
+script = ExtResource("1_e587w")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=2031414348]
+texture = ExtResource("2_usxed")
+hframes = 20
+vframes = 20
+frame = 11
+
+[node name="Collider" type="CollisionShape2D" parent="." unique_id=891618823]
+shape = SubResource("RectangleShape2D_qai3m")

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c73sufcvjiqf5"]
+
+[ext_resource type="Texture2D" uid="uid://yffm2yqvk8pm" path="res://assets/textures/minigame/img_tilemap.png" id="1_ghsqq"]
+[ext_resource type="Script" uid="uid://dnw3p1msjeydl" path="res://logic/minigame/character/player.gd" id="1_uhp0s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qai3m"]
+size = Vector2(10, 4)
+
+[node name="Player" type="CharacterBody2D" unique_id=2097982549]
+script = ExtResource("1_uhp0s")
+trail_color = Color(0.6, 0.8666666, 1, 0.6509804)
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=129406682]
+texture_filter = 1
+texture = ExtResource("1_ghsqq")
+hframes = 20
+vframes = 20
+frame = 240
+
+[node name="Collider" type="CollisionShape2D" parent="." unique_id=1129914869]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_qai3m")

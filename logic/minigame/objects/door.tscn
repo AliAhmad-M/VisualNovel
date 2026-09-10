@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://ciysyd2gdvgok"]
+
+[ext_resource type="Texture2D" uid="uid://yffm2yqvk8pm" path="res://assets/textures/minigame/img_tilemap.png" id="1_01mff"]
+[ext_resource type="Script" uid="uid://bkx0nlv0o1gfr" path="res://logic/minigame/objects/door.gd" id="1_m64b7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qai3m"]
+size = Vector2(16, 16)
+
+[sub_resource type="Animation" id="Animation_oljiu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(16, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_m64b7"]
+resource_name = "open"
+length = 0.39999999999999997
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2i(16, 2), Vector2i(18, 2), Vector2i(19, 2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oljiu"]
+_data = {
+&"RESET": SubResource("Animation_oljiu"),
+&"open": SubResource("Animation_m64b7")
+}
+
+[node name="Door" type="Node2D" unique_id=783325157]
+texture_filter = 1
+script = ExtResource("1_m64b7")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1732615938]
+texture = ExtResource("1_01mff")
+hframes = 20
+vframes = 20
+frame = 56
+
+[node name="Area" type="Area2D" parent="." unique_id=274913659]
+
+[node name="Collider" type="CollisionShape2D" parent="Area" unique_id=1742069183]
+shape = SubResource("RectangleShape2D_qai3m")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1545245589]
+libraries/ = SubResource("AnimationLibrary_oljiu")
+
+[connection signal="body_entered" from="Area" to="." method="_on_area_body_entered"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

@@ -63,9 +63,6 @@ func _init(line: String) -> void:
 		if code in ["$>", "$>>", "do", "do!", "set"]:
 			args["value"] = DMCompiler.extract_mutation("%s %s" % [code, raw_args])
 		else:
-			# Could be something like:
-			# 	"=1.0"
-			# 	" rate=20 level=10"
 			if raw_args and raw_args[0] == "=":
 				raw_args = "value" + raw_args
 			for pair: String in raw_args.strip_edges().split(" "):
