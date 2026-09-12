@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ckv66g64ws3vl" path="res://logic/ui/dialogue/dialogue_gui.gd" id="1_awdpu"]
 [ext_resource type="Texture2D" uid="uid://bc1a65vpnwup6" path="res://assets/textures/ui/game/choice/choice_light_idle.png" id="2_n7orp"]
 [ext_resource type="Script" uid="uid://c8ixy2rt40j63" path="res://logic/minigame/minigame_entry.gd" id="2_p3yad"]
-[ext_resource type="PackedScene" uid="uid://dq4dbv40vj8rt" path="res://logic/minigame/levels/debug/debug.tscn" id="3_hxxqu"]
+[ext_resource type="PackedScene" uid="uid://dq4dbv40vj8rt" path="res://logic/minigame/levels/tutorial/tutorial.tscn" id="3_hxxqu"]
 [ext_resource type="Texture2D" uid="uid://boeaok7o0rqqh" path="res://assets/textures/ui/game/choice/choice_light_hover.png" id="3_j63ba"]
 [ext_resource type="Texture2D" uid="uid://3ui3xct0p8um" path="res://assets/textures/ui/game/dialogue/dialoguebox_dark_red.png" id="3_n7orp"]
 [ext_resource type="Texture2D" uid="uid://bg2bssysacwsl" path="res://assets/textures/ui/game/dialogue/dialoguebox_light_red.png" id="4_ribjw"]
@@ -18,7 +18,7 @@
 
 [sub_resource type="Resource" id="Resource_vf1uc"]
 script = ExtResource("2_p3yad")
-minigame_id = "debug"
+minigame_id = "tutorial"
 scene = ExtResource("3_hxxqu")
 metadata/_custom_type_script = "uid://c8ixy2rt40j63"
 
@@ -41,6 +41,14 @@ choice_pressed_tex_light = ExtResource("3_j63ba")
 choice_normal_tex_dark = ExtResource("6_pcx7q")
 choice_hover_tex_dark = ExtResource("7_tl4t0")
 choice_pressed_tex_dark = ExtResource("7_tl4t0")
+
+[node name="CharacterStage" parent="." unique_id=1262265244 instance=ExtResource("7_awdpu")]
+layout_mode = 1
+
+[node name="Slot" parent="CharacterStage" index="0" unique_id=1915022763]
+offset_top = -674.0
+offset_bottom = 613.0
+offset_transform_scale = Vector2(0.45, 0.45)
 
 [node name="DialogueBox" type="TextureRect" parent="." unique_id=1589545541]
 layout_mode = 1
@@ -85,10 +93,10 @@ metadata/_custom_type_script = "uid://g32um0mltv5d"
 
 [node name="ChoicesBox" type="VBoxContainer" parent="DialogueBox" unique_id=748506387]
 layout_mode = 0
-offset_left = 580.0
-offset_top = -96.0
-offset_right = 1180.0
-offset_bottom = 4.0
+offset_left = 652.0
+offset_top = -104.0
+offset_right = 1252.0
+offset_bottom = -4.0
 theme_override_constants/separation = 8
 
 [node name="MinigameDisplay" parent="." unique_id=683539485 instance=ExtResource("13_tl4t0")]
@@ -107,8 +115,5 @@ anchor_left = 1.0
 offset_left = -480.0
 grow_horizontal = 0
 
-[node name="CharacterStage" parent="." unique_id=1262265244 instance=ExtResource("7_awdpu")]
-layout_mode = 1
-
-[editable path="DialogueMenu"]
 [editable path="CharacterStage"]
+[editable path="DialogueMenu"]

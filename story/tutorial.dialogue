@@ -1,0 +1,15 @@
+~ start
+???: [[Hey|Oh, hi there|Hello]], glad you made it.
+???: [#mood=grin] My name? Oh, don't worry about it, it's not that important anyways.
+???: [#mood=default] What's important is that I walk through the basics before you're on your own.
+???: [#mood=keen] Think of this like a tutorial.
+???: [#mood=default] First, dialogue moves forward with a tap or the accept button. Try it now.
+???: Good. Sometimes a line will pause and wait for you to pick a response from a list of options.
+???: And every so often, you will be required to complete minigames. Let's try one now, so it's not a surprise later.
+???: Here we go. [#minigame=tutorial]
+???: [#mood=happy] See? Nothing to it.
+???: [#mood=default] Ready to head out, or want to go over that again?
+- Go over it again => start
+- I'm ready
+	???: [#mood=happy] Great. Good luck out there.
+=> END

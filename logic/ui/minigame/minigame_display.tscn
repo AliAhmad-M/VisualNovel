@@ -3,6 +3,24 @@
 [ext_resource type="Texture2D" uid="uid://6htoq5o8vpxg" path="res://assets/textures/minigame/img_display.png" id="1_fkn15"]
 [ext_resource type="Script" uid="uid://cropxmlcy8j58" path="res://logic/ui/minigame/minigame_display.gd" id="1_lstx8"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lstx8"]
+size = Vector2(108, 104)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_akt0j"]
+size = Vector2(108, 104)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qai3m"]
+size = Vector2(104, 108)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l56mw"]
+size = Vector2(104, 108)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5a376"]
+radius = 80.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lstx8"]
+radius = 80.0
+
 [node name="MinigameDisplay" type="Control" unique_id=683539485]
 layout_mode = 3
 anchors_preset = 15
@@ -25,3 +43,33 @@ offset_top = 220.0
 offset_right = 1440.0
 offset_bottom = 860.0
 offset_transform_enabled = true
+
+[node name="Up" type="TouchScreenButton" parent="." unique_id=1602396173]
+position = Vector2(172, 406)
+shape = SubResource("RectangleShape2D_lstx8")
+action = "move_up"
+
+[node name="Down" type="TouchScreenButton" parent="." unique_id=1236640192]
+position = Vector2(172, 598)
+shape = SubResource("RectangleShape2D_akt0j")
+action = "move_down"
+
+[node name="Left" type="TouchScreenButton" parent="." unique_id=1291741134]
+position = Vector2(76, 502)
+shape = SubResource("RectangleShape2D_qai3m")
+action = "move_left"
+
+[node name="Right" type="TouchScreenButton" parent="." unique_id=1896795083]
+position = Vector2(268, 502)
+shape = SubResource("RectangleShape2D_l56mw")
+action = "move_right"
+
+[node name="B" type="TouchScreenButton" parent="." unique_id=786687038]
+position = Vector2(1649, 531)
+shape = SubResource("CircleShape2D_5a376")
+action = "dash"
+
+[node name="A" type="TouchScreenButton" parent="." unique_id=990046679]
+position = Vector2(1842, 468)
+shape = SubResource("CircleShape2D_lstx8")
+action = "jump"

@@ -6,15 +6,18 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qai3m"]
 size = Vector2(16, 16)
 
-[node name="Box" type="RigidBody2D" unique_id=923910564]
+[node name="Box" type="Node2D" unique_id=2114943513]
 texture_filter = 1
 script = ExtResource("1_e587w")
 
-[node name="Sprite" type="Sprite2D" parent="." unique_id=2031414348]
+[node name="Rigidbody" type="RigidBody2D" parent="." unique_id=1328116863]
+freeze_mode = 1
+
+[node name="Collider" type="CollisionShape2D" parent="Rigidbody" unique_id=891618823]
+shape = SubResource("RectangleShape2D_qai3m")
+
+[node name="Sprite" type="Sprite2D" parent="Rigidbody" unique_id=2031414348]
 texture = ExtResource("2_usxed")
 hframes = 20
 vframes = 20
 frame = 11
-
-[node name="Collider" type="CollisionShape2D" parent="." unique_id=891618823]
-shape = SubResource("RectangleShape2D_qai3m")

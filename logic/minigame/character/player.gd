@@ -26,8 +26,8 @@ extends CharacterBody2D
 @export var air_dash_safety_timeout: float = 2.0
 
 @export_group("Trail Effect")
-@export var trail_spawn_interval: float = 0.015
-@export var trail_lifetime: float = 0.3
+@export var trail_spawn_interval: float = 0.025
+@export var trail_lifetime: float = 0.25
 @export var trail_color: Color = Color(1, 1, 1, 0.65)
 @export var trail_hard_fade: bool = true
 
@@ -103,6 +103,13 @@ func _physics_process(delta: float) -> void:
 
 	_update_facing()
 	_update_animation(delta)
+	
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		if collision.get_collider() is RigidBody2D:
+			var collider = collision.get_collider() as RigidBody2D
+			var push_dir = -collision.get_normal()
+			collider.linear_velocity = push_dir * max_speed / 2
 
 # Coyote and jump buffer timers
 func _update_timers(delta: float) -> void:

@@ -4,7 +4,7 @@ signal theme_changed(is_dark_mode: bool)
 
 const SETTINGS_PATH := "user://settings.cfg"
 
-var dark_mode: bool = false:
+var dark_mode: bool = true:
 	set(value):
 		if dark_mode != value:
 			dark_mode = value

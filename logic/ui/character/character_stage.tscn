@@ -3,15 +3,16 @@
 [ext_resource type="Script" uid="uid://d3ach5parryqy" path="res://logic/ui/character/character_stage.gd" id="1_6fbgj"]
 [ext_resource type="Script" uid="uid://o1b5kf5okdd1" path="res://logic/ui/character/character_portrait.gd" id="2_58psd"]
 [ext_resource type="Script" uid="uid://bgpwik0iic747" path="res://logic/ui/character/character_expression.gd" id="3_6nigo"]
-[ext_resource type="Texture2D" uid="uid://dqcwpas1vh7gj" path="res://assets/textures/characters/debug/char_debug_default.png" id="3_httim"]
-[ext_resource type="Texture2D" uid="uid://ceegrnnwgry6d" path="res://assets/textures/characters/debug/char_debug_smile.png" id="5_xmccb"]
-[ext_resource type="Texture2D" uid="uid://da3et8jf2jdji" path="res://assets/textures/characters/debug/char_debug_grin.png" id="6_0g0uj"]
-[ext_resource type="Texture2D" uid="uid://cx4fiq24owmcf" path="res://assets/textures/characters/debug/char_debug_happy.png" id="7_l1dkc"]
-[ext_resource type="Texture2D" uid="uid://cnuuuby30rqt8" path="res://assets/textures/characters/debug/char_debug_neutral.png" id="8_v4gff"]
-[ext_resource type="Texture2D" uid="uid://djfscyq2wvdmi" path="res://assets/textures/characters/debug/char_debug_frown.png" id="9_ns7u1"]
-[ext_resource type="Texture2D" uid="uid://bis4g320qkptl" path="res://assets/textures/characters/debug/char_debug_angry.png" id="10_ycqsq"]
-[ext_resource type="Texture2D" uid="uid://baxer0o4mcdbj" path="res://assets/textures/characters/debug/char_debug_sad.png" id="11_ljcf3"]
-[ext_resource type="Texture2D" uid="uid://do50whdaanhf5" path="res://assets/textures/characters/debug/char_debug_shock.png" id="12_ded3a"]
+[ext_resource type="Texture2D" uid="uid://dqcwpas1vh7gj" path="res://assets/textures/characters/unknown/char_unknown_default.png" id="3_httim"]
+[ext_resource type="Texture2D" uid="uid://ceegrnnwgry6d" path="res://assets/textures/characters/unknown/char_unknown_smile.png" id="5_xmccb"]
+[ext_resource type="Texture2D" uid="uid://da3et8jf2jdji" path="res://assets/textures/characters/unknown/char_unknown_grin.png" id="6_0g0uj"]
+[ext_resource type="Texture2D" uid="uid://cx4fiq24owmcf" path="res://assets/textures/characters/unknown/char_unknown_happy.png" id="7_l1dkc"]
+[ext_resource type="Texture2D" uid="uid://cnuuuby30rqt8" path="res://assets/textures/characters/unknown/char_unknown_neutral.png" id="8_v4gff"]
+[ext_resource type="Texture2D" uid="uid://djfscyq2wvdmi" path="res://assets/textures/characters/unknown/char_unknown_frown.png" id="9_ns7u1"]
+[ext_resource type="Texture2D" uid="uid://bis4g320qkptl" path="res://assets/textures/characters/unknown/char_unknown_angry.png" id="10_ycqsq"]
+[ext_resource type="Texture2D" uid="uid://baxer0o4mcdbj" path="res://assets/textures/characters/unknown/char_unknown_sad.png" id="11_ljcf3"]
+[ext_resource type="Texture2D" uid="uid://ctmycr18n834u" path="res://assets/textures/characters/unknown/char_unknown_keen.png" id="12_0g0uj"]
+[ext_resource type="Texture2D" uid="uid://do50whdaanhf5" path="res://assets/textures/characters/unknown/char_unknown_shock.png" id="12_ded3a"]
 
 [sub_resource type="Resource" id="Resource_nes3t"]
 script = ExtResource("3_6nigo")
@@ -62,8 +63,8 @@ metadata/_custom_type_script = "uid://bgpwik0iic747"
 
 [sub_resource type="Resource" id="Resource_0g0uj"]
 script = ExtResource("3_6nigo")
-expression_name = "neutral"
-texture = ExtResource("8_v4gff")
+expression_name = "keen"
+texture = ExtResource("12_0g0uj")
 metadata/_custom_type_script = "uid://bgpwik0iic747"
 
 [sub_resource type="Resource" id="Resource_l1dkc"]
@@ -74,7 +75,7 @@ metadata/_custom_type_script = "uid://bgpwik0iic747"
 
 [sub_resource type="Resource" id="Resource_0xm2m"]
 script = ExtResource("2_58psd")
-character_name = "Debug"
+character_name = "???"
 expressions = Array[ExtResource("3_6nigo")]([SubResource("Resource_nes3t"), SubResource("Resource_h7afy"), SubResource("Resource_opx2q"), SubResource("Resource_0aw32"), SubResource("Resource_c7yqp"), SubResource("Resource_johyd"), SubResource("Resource_q6i2g"), SubResource("Resource_xmccb"), SubResource("Resource_0g0uj"), SubResource("Resource_l1dkc")])
 metadata/_custom_type_script = "uid://o1b5kf5okdd1"
 

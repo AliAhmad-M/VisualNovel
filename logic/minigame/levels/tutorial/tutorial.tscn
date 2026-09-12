@@ -1,0 +1,32 @@
+[gd_scene format=4 uid="uid://dq4dbv40vj8rt"]
+
+[ext_resource type="PackedScene" uid="uid://dppeltx3yoetr" path="res://logic/minigame/levels/base_level.tscn" id="1_dq56s"]
+[ext_resource type="PackedScene" uid="uid://c73sufcvjiqf5" path="res://logic/minigame/character/player.tscn" id="2_r5ppb"]
+[ext_resource type="PackedScene" uid="uid://blb1hnhmlwrmg" path="res://logic/minigame/tilemap/tilemap.tscn" id="3_yyhay"]
+[ext_resource type="PackedScene" uid="uid://dfekaiqmyevar" path="res://logic/minigame/objects/key.tscn" id="4_aqdrr"]
+[ext_resource type="PackedScene" uid="uid://ciysyd2gdvgok" path="res://logic/minigame/objects/door.tscn" id="5_y5rrt"]
+[ext_resource type="PackedScene" uid="uid://b0b0lm84agtk4" path="res://logic/minigame/objects/box.tscn" id="6_wmcnl"]
+
+[node name="Debug" unique_id=486714774 instance=ExtResource("1_dq56s")]
+
+[node name="Player" parent="WorldContainer/SubViewport/World" parent_id_path=PackedInt32Array(1797901669) index="0" unique_id=2097982549 instance=ExtResource("2_r5ppb")]
+position = Vector2(38, 136)
+
+[node name="Tilemap" parent="WorldContainer/SubViewport/World" parent_id_path=PackedInt32Array(1797901669) index="1" unique_id=72569401 instance=ExtResource("3_yyhay")]
+
+[node name="Layer0" parent="WorldContainer/SubViewport/World/Tilemap" index="0" unique_id=1083763507]
+tile_map_data = PackedByteArray("AAABAAkAAAAQAAkAAAACAAkAAAAQAAkAAAADAAkAAAAQAAkAAAAEAAkAAAAQAAkAAAAFAAkAAAAQAAkAAAAGAAkAAAAQAAkAAAAHAAkAAAAQAAkAAAAJAAgAAAAPAAoAAAAJAAcAAAAPAAoAAAAIAAkAAAAQAAkAAAAAAAgAAAARAAoAAAAAAAcAAAARAAoAAAAAAAYAAAARAAoAAAAOAAQAAAAPAAoAAAAOAAMAAAAPAAoAAAAOAAIAAAAPAAoAAAAOAAEAAAAPAAoAAAANAAAAAAAQAAsAAAAMAAAAAAAQAAsAAAALAAAAAAAQAAsAAAAKAAAAAAAQAAsAAAAJAAAAAAAQAAsAAAABAAAAAAAQAAsAAAACAAAAAAAQAAsAAAADAAAAAAAQAAsAAAAEAAAAAAAQAAsAAAAFAAAAAAAQAAsAAAAGAAAAAAAQAAsAAAAHAAAAAAAQAAsAAAAIAAAAAAAQAAsAAAAAAAEAAAARAAoAAAAAAAIAAAARAAoAAAAAAAMAAAARAAoAAAAAAAQAAAARAAoAAAAAAAUAAAARAAoAAAAJAAkAAAATAAwAAAAOAAUAAAAPAAoAAAAAAAkAAAATAAkAAAAAAAAAAAATAAoAAAAOAAAAAAATAAsAAAAEAAQAAAAEAAQAAAAFAAQAAAAFAAQAAAAGAAQAAAAGAAQAAAAJAAYAAAAPAAkAAAAKAAYAAAAQAAkAAAALAAYAAAAQAAkAAAAMAAYAAAAQAAkAAAANAAYAAAAQAAkAAAAOAAYAAAATAAwAAAA=")
+
+[node name="Key" parent="WorldContainer/SubViewport/World" parent_id_path=PackedInt32Array(1797901669) index="2" unique_id=1880418237 node_paths=PackedStringArray("door") instance=ExtResource("4_aqdrr")]
+position = Vector2(88, 48)
+door = NodePath("../Door")
+
+[node name="Door" parent="WorldContainer/SubViewport/World" parent_id_path=PackedInt32Array(1797901669) index="3" unique_id=783325157 node_paths=PackedStringArray("current_level") instance=ExtResource("5_y5rrt")]
+position = Vector2(208, 88)
+is_locked = true
+current_level = NodePath("../../../..")
+
+[node name="Box" parent="WorldContainer/SubViewport/World" parent_id_path=PackedInt32Array(1797901669) index="4" unique_id=923910564 instance=ExtResource("6_wmcnl")]
+position = Vector2(88, 136)
+
+[editable path="WorldContainer/SubViewport/World/Tilemap"]

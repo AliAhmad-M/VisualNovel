@@ -68,8 +68,8 @@ func _ready() -> void:
 
 	# Configure the choice buttons
 	choices_box_base_y = choices_box.position.y
-	choice_button_w = choice_normal_tex_light.get_size().x * 0.55
-	choice_button_h = choice_normal_tex_light.get_size().y * 0.75
+	choice_button_w = choice_normal_tex_light.get_size().x * 0.65
+	choice_button_h = choice_normal_tex_light.get_size().y * 0.85
 
 	# Menu
 	dialogue_menu.continue_pressed.connect(advance)
@@ -105,7 +105,7 @@ func toggle_skip() -> void:
 		return
 		
 	if is_typing:
-		dialogue_label.visible_ratio = 1.0
+		dialogue_label.skip_typing()
 		
 	elif waiting_for_tap:
 		waiting_for_tap = false
@@ -198,7 +198,7 @@ func _make_choice_button(text: String) -> Button:
 	btn.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	btn.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 	btn.add_theme_font_override("font", load("res://assets/fonts/font_xtypewriter_regular.ttf"))
-	btn.add_theme_font_size_override("font_size", 24)
+	btn.add_theme_font_size_override("font_size", 28)
 	
 	# Apply stylebox and colors
 	_apply_button_theme(btn)
@@ -228,8 +228,7 @@ func advance() -> void:
 		return
 
 	if is_typing:
-		dialogue_label.visible_ratio = 1.0
-		is_typing = false
+		dialogue_label.skip_typing()
 
 	elif waiting_for_tap:
 		waiting_for_tap = false
