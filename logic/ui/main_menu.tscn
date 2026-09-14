@@ -1,11 +1,18 @@
 [gd_scene format=3 uid="uid://doab28f458jhc"]
 
 [ext_resource type="Script" uid="uid://ddp0jvwm2kji" path="res://logic/ui/main_menu.gd" id="1_2oaxc"]
-[ext_resource type="Texture2D" uid="uid://clajpjt03p5ew" path="res://assets/textures/backgrounds/downtown/alley.jpg" id="1_cg63i"]
 [ext_resource type="PackedScene" uid="uid://hk5lsnnt80ao" path="res://logic/chapters/tutorial.tscn" id="2_cbtr2"]
-[ext_resource type="Texture2D" uid="uid://bi3lhwpe3qwhc" path="res://assets/textures/backgrounds/plant_borders/mixed_azalia_angled.png" id="2_p5ep0"]
+[ext_resource type="Texture2D" uid="uid://to0115n3huqx" path="res://assets/textures/backgrounds/old_interior/fireplace.jpg" id="3_cbtr2"]
 [ext_resource type="FontFile" uid="uid://mx43djs5g6v5" path="res://assets/fonts/font_xtypewriter_bold.ttf" id="3_p5ep0"]
+[ext_resource type="Texture2D" uid="uid://cbfofrayebmrf" path="res://assets/textures/backgrounds/plant_borders/rose_frame.png" id="4_cbtr2"]
 [ext_resource type="FontFile" uid="uid://bkopot060ow2d" path="res://assets/fonts/font_xtypewriter_regular.ttf" id="4_htpt1"]
+[ext_resource type="Shader" uid="uid://bbher1qg0b2qf" path="res://logic/ui/overlay.gdshader" id="5_sqsa2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sqsa2"]
+shader = ExtResource("5_sqsa2")
+shader_parameter/alpha = 1.0
+shader_parameter/inner_radius = 0.0
+shader_parameter/outer_radius = 1.5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2oaxc"]
 content_margin_left = 4.0
@@ -106,7 +113,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_cg63i")
+texture = ExtResource("3_cbtr2")
 
 [node name="Background2" type="TextureRect" parent="." unique_id=149291207]
 layout_mode = 1
@@ -115,7 +122,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_p5ep0")
+texture = ExtResource("4_cbtr2")
+
+[node name="Overlay" type="ColorRect" parent="." unique_id=546321492]
+material = SubResource("ShaderMaterial_sqsa2")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 0, 0.11764706)
 
 [node name="Elements" type="VBoxContainer" parent="." unique_id=855855541]
 layout_mode = 0

@@ -4,7 +4,7 @@
 [ext_resource type="Resource" uid="uid://c7fdacke3f5vl" path="res://story/tutorial.dialogue" id="2_kn7lx"]
 [ext_resource type="Texture2D" uid="uid://cvv62mncwk003" path="res://assets/textures/backgrounds/tutorial.jpg" id="3_kn7lx"]
 
-[node name="Debug" type="Control" unique_id=1014261165]
+[node name="Tutorial" type="Control" unique_id=1014261165]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
