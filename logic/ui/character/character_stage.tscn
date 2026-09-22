@@ -13,6 +13,20 @@
 [ext_resource type="Texture2D" uid="uid://baxer0o4mcdbj" path="res://assets/textures/characters/unknown/char_unknown_sad.png" id="11_ljcf3"]
 [ext_resource type="Texture2D" uid="uid://ctmycr18n834u" path="res://assets/textures/characters/unknown/char_unknown_keen.png" id="12_0g0uj"]
 [ext_resource type="Texture2D" uid="uid://do50whdaanhf5" path="res://assets/textures/characters/unknown/char_unknown_shock.png" id="12_ded3a"]
+[ext_resource type="Texture2D" uid="uid://b26punlvwlr6u" path="res://assets/textures/characters/ayyan/3.png" id="14_7lg1i"]
+[ext_resource type="Texture2D" uid="uid://cr3i6runqaf51" path="res://assets/textures/characters/ayyan/4.png" id="15_8cg8i"]
+[ext_resource type="Texture2D" uid="uid://xtrhmrpyseuj" path="res://assets/textures/characters/ayyan/5.png" id="16_y50qw"]
+[ext_resource type="Texture2D" uid="uid://fcmw224prv02" path="res://assets/textures/characters/ayyan/6.png" id="17_8jr2m"]
+[ext_resource type="Texture2D" uid="uid://cwhsu5qa2e1le" path="res://assets/textures/characters/ayyan/7.png" id="18_vvp0x"]
+[ext_resource type="Texture2D" uid="uid://dlsatepmbvgei" path="res://assets/textures/characters/ayyan/8.png" id="19_fshol"]
+[ext_resource type="Texture2D" uid="uid://0msullguers0" path="res://assets/textures/characters/ayyan/9.png" id="20_3ja5m"]
+[ext_resource type="Texture2D" uid="uid://djjgtd8m80r18" path="res://assets/textures/characters/ayyan/10.png" id="21_465eo"]
+[ext_resource type="Texture2D" uid="uid://c5bygldleet6y" path="res://assets/textures/characters/ayyan/11.png" id="22_erwng"]
+[ext_resource type="Texture2D" uid="uid://0aa1w8tb53mp" path="res://assets/textures/characters/mother/3.png" id="23_fshol"]
+[ext_resource type="Texture2D" uid="uid://va024vbipne0" path="res://assets/textures/characters/mother/5.png" id="24_3ja5m"]
+[ext_resource type="Texture2D" uid="uid://b4j2kaesl42t5" path="res://assets/textures/characters/mother/6.png" id="25_465eo"]
+[ext_resource type="Texture2D" uid="uid://do52ouhfhimxd" path="res://assets/textures/characters/mother/10.png" id="26_erwng"]
+[ext_resource type="Texture2D" uid="uid://dyx1s3h6to1a0" path="res://assets/textures/characters/mother/11.png" id="27_yjnne"]
 
 [sub_resource type="Resource" id="Resource_nes3t"]
 script = ExtResource("3_6nigo")
@@ -79,6 +93,100 @@ character_name = "???"
 expressions = Array[ExtResource("3_6nigo")]([SubResource("Resource_nes3t"), SubResource("Resource_h7afy"), SubResource("Resource_opx2q"), SubResource("Resource_0aw32"), SubResource("Resource_c7yqp"), SubResource("Resource_johyd"), SubResource("Resource_q6i2g"), SubResource("Resource_xmccb"), SubResource("Resource_0g0uj"), SubResource("Resource_l1dkc")])
 metadata/_custom_type_script = "uid://o1b5kf5okdd1"
 
+[sub_resource type="Resource" id="Resource_773hf"]
+script = ExtResource("3_6nigo")
+texture = ExtResource("14_7lg1i")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_c8ntk"]
+script = ExtResource("3_6nigo")
+expression_name = "smile"
+texture = ExtResource("15_8cg8i")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_abeb8"]
+script = ExtResource("3_6nigo")
+expression_name = "happy"
+texture = ExtResource("16_y50qw")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_oooae"]
+script = ExtResource("3_6nigo")
+expression_name = "neutral"
+texture = ExtResource("17_8jr2m")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_aoo56"]
+script = ExtResource("3_6nigo")
+expression_name = "shock"
+texture = ExtResource("18_vvp0x")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_yyehl"]
+script = ExtResource("3_6nigo")
+expression_name = "keen"
+texture = ExtResource("19_fshol")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_xvych"]
+script = ExtResource("3_6nigo")
+expression_name = "frown"
+texture = ExtResource("20_3ja5m")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_lr8w7"]
+script = ExtResource("3_6nigo")
+expression_name = "angry"
+texture = ExtResource("21_465eo")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_uuod6"]
+script = ExtResource("3_6nigo")
+expression_name = "sad"
+texture = ExtResource("22_erwng")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_h0wlx"]
+script = ExtResource("2_58psd")
+character_name = "Ayyan"
+expressions = Array[ExtResource("3_6nigo")]([SubResource("Resource_773hf"), SubResource("Resource_c8ntk"), SubResource("Resource_abeb8"), SubResource("Resource_oooae"), SubResource("Resource_aoo56"), SubResource("Resource_yyehl"), SubResource("Resource_xvych"), SubResource("Resource_lr8w7"), SubResource("Resource_uuod6")])
+metadata/_custom_type_script = "uid://o1b5kf5okdd1"
+
+[sub_resource type="Resource" id="Resource_6y0im"]
+script = ExtResource("3_6nigo")
+texture = ExtResource("23_fshol")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_cmkcd"]
+script = ExtResource("3_6nigo")
+expression_name = "sad"
+texture = ExtResource("24_3ja5m")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_v14if"]
+script = ExtResource("3_6nigo")
+expression_name = "angry"
+texture = ExtResource("25_465eo")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_q56up"]
+script = ExtResource("3_6nigo")
+expression_name = "smile"
+texture = ExtResource("26_erwng")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_1lbjr"]
+script = ExtResource("3_6nigo")
+expression_name = "happy"
+texture = ExtResource("27_yjnne")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_0osgw"]
+script = ExtResource("2_58psd")
+character_name = "Mom"
+expressions = Array[ExtResource("3_6nigo")]([SubResource("Resource_6y0im"), SubResource("Resource_cmkcd"), SubResource("Resource_v14if"), SubResource("Resource_q56up"), SubResource("Resource_1lbjr")])
+metadata/_custom_type_script = "uid://o1b5kf5okdd1"
+
 [node name="CharacterStage" type="Control" unique_id=1262265244]
 layout_mode = 3
 anchors_preset = 15
@@ -88,7 +196,8 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_6fbgj")
-portrait_entries = Array[ExtResource("2_58psd")]([SubResource("Resource_0xm2m")])
+slide_time = 0.15
+portrait_entries = Array[ExtResource("2_58psd")]([SubResource("Resource_0xm2m"), SubResource("Resource_h0wlx"), SubResource("Resource_0osgw")])
 
 [node name="Slot" type="TextureRect" parent="." unique_id=1915022763]
 layout_mode = 1

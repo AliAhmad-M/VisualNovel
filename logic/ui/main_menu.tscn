@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://doab28f458jhc"]
 
 [ext_resource type="Script" uid="uid://ddp0jvwm2kji" path="res://logic/ui/main_menu.gd" id="1_2oaxc"]
-[ext_resource type="PackedScene" uid="uid://hk5lsnnt80ao" path="res://logic/chapters/tutorial.tscn" id="2_cbtr2"]
+[ext_resource type="PackedScene" uid="uid://hk5lsnnt80ao" path="res://logic/acts/tutorial.tscn" id="2_cbtr2"]
 [ext_resource type="Texture2D" uid="uid://to0115n3huqx" path="res://assets/textures/backgrounds/old_interior/fireplace.jpg" id="3_cbtr2"]
 [ext_resource type="FontFile" uid="uid://mx43djs5g6v5" path="res://assets/fonts/font_xtypewriter_bold.ttf" id="3_p5ep0"]
 [ext_resource type="Texture2D" uid="uid://cbfofrayebmrf" path="res://assets/textures/backgrounds/plant_borders/rose_frame.png" id="4_cbtr2"]

@@ -10,6 +10,7 @@ class_name CharacterStage
 
 var portraits: Dictionary = {}
 var _current_character: String = ""
+var current_mood: String = ""
 var _rest_x: float
 
 func _ready() -> void:
@@ -27,6 +28,7 @@ func show_speaker(character_name: String, expression: String = "") -> void:
 		return
 
 	var portrait: CharacterPortrait = portraits[character_name]
+	var resolved_mood := expression
 	var texture: Texture2D = null
 	if expression != "":
 		texture = portrait.get_texture(expression)
@@ -36,10 +38,14 @@ func show_speaker(character_name: String, expression: String = "") -> void:
 		# Show previous expression if exists
 		if character_name == _current_character:
 			texture = slot.texture
+			resolved_mood = current_mood
 
 		# Otherwise show default expression
 		else:
-			texture = portrait.get_texture("default")
+			resolved_mood = "default"
+			texture = portrait.get_texture(resolved_mood)
+
+	current_mood = resolved_mood
 
 	# Character already in the scene — just update the expression in place
 	if character_name == _current_character:
@@ -53,6 +59,34 @@ func show_speaker(character_name: String, expression: String = "") -> void:
 	# Swap to new character otherwise
 	else:
 		_swap_to(character_name, texture)
+		
+func get_state() -> Dictionary:
+	return {
+		"character": _current_character,
+		"mood": current_mood
+	}
+
+func restore_state(character_name: String, mood: String) -> void:
+	# Nothing was on screen — make sure stage is clear
+	if character_name == "" or not portraits.has(character_name):
+		_current_character = ""
+		current_mood = ""
+		slot.texture = null
+		slot.modulate.a = 0.0
+		slot.position.x = _enter_x()
+		return
+
+	var portrait: CharacterPortrait = portraits[character_name]
+	var texture: Texture2D = portrait.get_texture(mood) if mood != "" else null
+	if texture == null:
+		mood = "default"
+		texture = portrait.get_texture(mood)
+
+	_current_character = character_name
+	current_mood = mood
+	slot.texture = texture
+	slot.modulate.a = 1.0
+	slot.position.x = _rest_x   # snap to rest position, no tween
 
 func clear_all() -> void:
 	# End of scene

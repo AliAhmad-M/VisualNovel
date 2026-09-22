@@ -257,4 +257,5 @@ func _unhandled_input(event: InputEvent) -> void:
 	# Handle input
 	if event.is_action_pressed("ui_accept") or (event is InputEventScreenTouch and event.pressed):
 		advance()
-		get_viewport().set_input_as_handled()
+		var viewport = get_viewport()
+		if viewport: viewport.set_input_as_handled()

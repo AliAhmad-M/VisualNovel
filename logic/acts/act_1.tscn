@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c6ypfmh81kw8c"]
+
+[ext_resource type="Script" uid="uid://cw03syrurob0o" path="res://logic/acts/act.gd" id="1_5uggf"]
+[ext_resource type="Resource" uid="uid://d1gg1xdyxyxrq" path="res://story/act_1.dialogue" id="2_d2k62"]
+[ext_resource type="Texture2D" uid="uid://duqufgwunokpp" path="res://assets/textures/backgrounds/house/single bedroom.jpg" id="2_uo3jk"]
+[ext_resource type="PackedScene" uid="uid://gdlkriybxvxu" path="res://logic/acts/act_2.tscn" id="3_g513j"]
+
+[node name="Act1" type="Control" unique_id=152198579]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5uggf")
+dialogue_resource = ExtResource("2_d2k62")
+next_act = ExtResource("3_g513j")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=922094499]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_uo3jk")

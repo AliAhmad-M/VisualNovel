@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://gdlkriybxvxu"]
+
+[ext_resource type="Script" uid="uid://cw03syrurob0o" path="res://logic/acts/act.gd" id="1_m3nf5"]
+[ext_resource type="Resource" uid="uid://qmdidi77psf6" path="res://story/act_2.dialogue" id="2_ul1a2"]
+[ext_resource type="Texture2D" uid="uid://vde6bcltb6im" path="res://assets/textures/backgrounds/house/dining_kitchen.jpg" id="3_qnkx6"]
+
+[node name="Act2" type="Control" unique_id=45263043]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m3nf5")
+dialogue_resource = ExtResource("2_ul1a2")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1475044932]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_qnkx6")

@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ck0trol6fk4jg"]
+
+[ext_resource type="Script" uid="uid://cw03syrurob0o" path="res://logic/acts/act.gd" id="1_83ob5"]
+
+[node name="Act3a" type="Control" unique_id=1156281288]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_83ob5")

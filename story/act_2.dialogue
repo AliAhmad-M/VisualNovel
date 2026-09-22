@@ -1,0 +1,79 @@
+~ start
+Mom [#mood=smile]: I'm home!
+Mom: Ayyan, could you come down to the dining room, we need to talk.
+Mom [#mood=default]: It's... about the text that I sent you earlier.
+
+if GameState.fields.get("read_letter", true):
+	=> confronted_read
+else:
+	=> confronted_unread
+	
+~ confronted_unread
+Mom: So you didn't read the letter now, did you?
+Ayyan [#mood=default]: Of course not, Mom.
+Ayyan: I would never open it when you told me not to.
+Mom [#mood=smile]: I'm glad you didn't, my son.
+Mom: It's nothing but a bad omen.
+Mom: It's best if you just stay away from it.
+Ayyan [#mood=neutral]: What do you mean, mom?
+Ayyan: Everything you're saying is... really confusing.
+Ayyan: Is there anything wrong?
+Mom: Just, forget any of this ever happened, alright? It's for your own good.
+Ayyan [#mood=sad]: Mom... If there's anything that's bothering you...
+Ayyan [#mood=frown]: Then I feel like I deserve to know.
+Mom [#mood=sad]: ...
+Mom: I really didn't want you to get involved in this but...
+Mom: I guess it's about time you knew about this.
+=> reveal
+
+~ confronted_read
+Mom [#mood=neutral]: So you didn't read the letter now, did you?
+Ayyan [#mood=neutral]: I did, mom.
+Ayyan [#mood=sad]: I'm really sorry about that but... I was just... curious.
+Ayyan: That letter just showed up out of nowhere and I wanted to see what it was about.
+Ayyan: And... seeing your text made me even more worried.
+Mom [#mood=sad]: I am a little disappointed. But well, I guess it was about time you knew anyway.
+=> reveal
+
+
+~ reveal
+Ayyan [#mood=neutral]: Knew what, mom?
+Mom: The place mentioned in the letter... Blackwood Mansion...
+Mom [#mood=sad]: You're too young to remember this but... Your father used to work there.
+Mom: He left the job after only a few months and by that point he was a completely different person.
+Mom: He never talked about it at all, no matter how much I pushed him.
+Mom: He had just shut himself out to the world.
+Mom: That is why I don't want you to go there.
+Mom: That place isn't safe for you... I can't see you end up like your father.
+Ayyan [#mood=neutral]: But... why would they contact me now after all this time?
+Ayyan: What could they want with me?
+Ayyan [#mood=angry]: And why did you never tell me that Dad was involved with them?
+Mom [#mood=frown]: All I know is that some things are better off not knowing and getting involved.
+Mom [#mood=sad]: Promise me, Ayyan. You have to promise me you won't go there.
+- Lie about not going
+	=> promise_response_lie
+- Decide not to go
+	=> promise_response_truth
+- Decide to go there
+	=> insist_response
+
+~ promise_response_truth
+do GameState.fields["next_act"] = "act3b"
+Ayyan [#mood=default]: I won't go, Mom. Don't worry.
+Mom [#mood=happy]: I'm so relieved. I would never want you to be in any danger.
+=> END
+
+~ promise_response_lie
+do GameState.fields["next_act"] = "act3a"
+Ayyan [#mood=neutral]: (I feel kinda bad about lying to Mom). 
+Ayyan [#mood=default]: I won't go, Mom. Don't worry.
+Mom [#mood=happy]: I'm so relieved. I would never want you to be in any danger.
+=> END
+
+~ insist_response
+do GameState.fields["next_act"] = "act3a"
+Ayyan [#mood=frown]: I have to go, mom. I'm sorry.
+Ayyan: Don't worry about me, I'll be safe, I promise.
+Mom [#mood=sad]: Please, Ayyan, I beg you, don't go.
+Ayyan [#mood=frown]: I'm sorry, mom, but I must look for answers.
+=> END

@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://hk5lsnnt80ao"]
 
-[ext_resource type="Script" uid="uid://cw03syrurob0o" path="res://logic/chapters/tutorial.gd" id="1_kn7lx"]
+[ext_resource type="Script" uid="uid://cw03syrurob0o" path="res://logic/acts/act.gd" id="1_kn7lx"]
 [ext_resource type="Resource" uid="uid://c7fdacke3f5vl" path="res://story/tutorial.dialogue" id="2_kn7lx"]
+[ext_resource type="PackedScene" uid="uid://c6ypfmh81kw8c" path="res://logic/acts/act_1.tscn" id="3_erfus"]
 [ext_resource type="Texture2D" uid="uid://cvv62mncwk003" path="res://assets/textures/backgrounds/tutorial.jpg" id="3_kn7lx"]
 
 [node name="Tutorial" type="Control" unique_id=1014261165]
@@ -13,6 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kn7lx")
 dialogue_resource = ExtResource("2_kn7lx")
+next_act = ExtResource("3_erfus")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1187107892]
 layout_mode = 0
