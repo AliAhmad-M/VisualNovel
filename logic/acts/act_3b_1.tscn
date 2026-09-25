@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bwpdtjl3tccu6"]
+
+[ext_resource type="Script" uid="uid://cw03syrurob0o" path="res://logic/acts/act.gd" id="1_hxu3i"]
+[ext_resource type="Resource" uid="uid://55aciwo38e6a" path="res://story/act_3b_1.dialogue" id="2_lk62c"]
+
+[node name="Act3b1" type="Control" unique_id=1156281288]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hxu3i")
+dialogue_resource = ExtResource("2_lk62c")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1176391825]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

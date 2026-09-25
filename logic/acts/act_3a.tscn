@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://ck0trol6fk4jg"]
 
 [ext_resource type="Script" uid="uid://cw03syrurob0o" path="res://logic/acts/act.gd" id="1_83ob5"]
+[ext_resource type="Resource" uid="uid://buyxj35oiu4ma" path="res://story/act_3a.dialogue" id="2_30nda"]
+[ext_resource type="Texture2D" uid="uid://b4qniaap6xsix" path="res://assets/textures/backgrounds/downtown/parknchairs.jpg" id="2_83ob5"]
 
 [node name="Act3a" type="Control" unique_id=1156281288]
 layout_mode = 3
@@ -10,3 +12,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_83ob5")
+dialogue_resource = ExtResource("2_30nda")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=238331410]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_83ob5")

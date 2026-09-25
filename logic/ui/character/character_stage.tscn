@@ -27,6 +27,17 @@
 [ext_resource type="Texture2D" uid="uid://b4j2kaesl42t5" path="res://assets/textures/characters/mother/6.png" id="25_465eo"]
 [ext_resource type="Texture2D" uid="uid://do52ouhfhimxd" path="res://assets/textures/characters/mother/10.png" id="26_erwng"]
 [ext_resource type="Texture2D" uid="uid://dyx1s3h6to1a0" path="res://assets/textures/characters/mother/11.png" id="27_yjnne"]
+[ext_resource type="Texture2D" uid="uid://cpd6xb1ro6x8x" path="res://assets/textures/characters/hamza/1.png" id="28_erwng"]
+[ext_resource type="Texture2D" uid="uid://cqsoex178643m" path="res://assets/textures/characters/hamza/2.png" id="29_yjnne"]
+[ext_resource type="Texture2D" uid="uid://dq8fsjgqn21a3" path="res://assets/textures/characters/hamza/3.png" id="30_6y0im"]
+[ext_resource type="Texture2D" uid="uid://xywaa70ono6y" path="res://assets/textures/characters/hamza/4.png" id="31_0rqq5"]
+[ext_resource type="Texture2D" uid="uid://c35vseyvyg603" path="res://assets/textures/characters/hamza/5.png" id="32_yhw4o"]
+[ext_resource type="Texture2D" uid="uid://dtmvnlfmvjevp" path="res://assets/textures/characters/hamza/6.png" id="33_8luub"]
+[ext_resource type="Texture2D" uid="uid://bcdbils1wsnrp" path="res://assets/textures/characters/hamza/7.png" id="34_nreba"]
+[ext_resource type="Texture2D" uid="uid://0xp6lnpdc0oy" path="res://assets/textures/characters/hamza/8.png" id="35_foj32"]
+[ext_resource type="Texture2D" uid="uid://cbevlkwjtsonb" path="res://assets/textures/characters/hamza/9.png" id="36_0ixil"]
+[ext_resource type="Texture2D" uid="uid://bxvrb8cjupcjq" path="res://assets/textures/characters/hamza/10.png" id="37_c00xx"]
+[ext_resource type="Texture2D" uid="uid://c70blqkd7jwlk" path="res://assets/textures/characters/shooter.png" id="38_yhw4o"]
 
 [sub_resource type="Resource" id="Resource_nes3t"]
 script = ExtResource("3_6nigo")
@@ -187,6 +198,82 @@ character_name = "Mom"
 expressions = Array[ExtResource("3_6nigo")]([SubResource("Resource_6y0im"), SubResource("Resource_cmkcd"), SubResource("Resource_v14if"), SubResource("Resource_q56up"), SubResource("Resource_1lbjr")])
 metadata/_custom_type_script = "uid://o1b5kf5okdd1"
 
+[sub_resource type="Resource" id="Resource_fshol"]
+script = ExtResource("3_6nigo")
+texture = ExtResource("28_erwng")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_3ja5m"]
+script = ExtResource("3_6nigo")
+expression_name = "smile"
+texture = ExtResource("29_yjnne")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_465eo"]
+script = ExtResource("3_6nigo")
+expression_name = "happy"
+texture = ExtResource("30_6y0im")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_uhuch"]
+script = ExtResource("3_6nigo")
+expression_name = "joyful"
+texture = ExtResource("31_0rqq5")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_ofeii"]
+script = ExtResource("3_6nigo")
+expression_name = "neutral"
+texture = ExtResource("32_yhw4o")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_f8pd0"]
+script = ExtResource("3_6nigo")
+expression_name = "shock"
+texture = ExtResource("33_8luub")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_fwtvx"]
+script = ExtResource("3_6nigo")
+expression_name = "keen"
+texture = ExtResource("34_nreba")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_0rqq5"]
+script = ExtResource("3_6nigo")
+expression_name = "frown"
+texture = ExtResource("35_foj32")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_yhw4o"]
+script = ExtResource("3_6nigo")
+expression_name = "angry"
+texture = ExtResource("36_0ixil")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_8luub"]
+script = ExtResource("3_6nigo")
+expression_name = "sad"
+texture = ExtResource("37_c00xx")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_fgha0"]
+script = ExtResource("2_58psd")
+character_name = "Hamza"
+expressions = Array[ExtResource("3_6nigo")]([SubResource("Resource_fshol"), SubResource("Resource_3ja5m"), SubResource("Resource_465eo"), SubResource("Resource_uhuch"), SubResource("Resource_ofeii"), SubResource("Resource_f8pd0"), SubResource("Resource_fwtvx"), SubResource("Resource_0rqq5"), SubResource("Resource_yhw4o"), SubResource("Resource_8luub")])
+metadata/_custom_type_script = "uid://o1b5kf5okdd1"
+
+[sub_resource type="Resource" id="Resource_nreba"]
+script = ExtResource("3_6nigo")
+texture = ExtResource("38_yhw4o")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_gr8mp"]
+script = ExtResource("2_58psd")
+character_name = "shooter"
+expressions = Array[ExtResource("3_6nigo")]([SubResource("Resource_nreba")])
+metadata/_custom_type_script = "uid://o1b5kf5okdd1"
+
 [node name="CharacterStage" type="Control" unique_id=1262265244]
 layout_mode = 3
 anchors_preset = 15
@@ -197,7 +284,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_6fbgj")
 slide_time = 0.15
-portrait_entries = Array[ExtResource("2_58psd")]([SubResource("Resource_0xm2m"), SubResource("Resource_h0wlx"), SubResource("Resource_0osgw")])
+portrait_entries = Array[ExtResource("2_58psd")]([SubResource("Resource_0xm2m"), SubResource("Resource_h0wlx"), SubResource("Resource_0osgw"), SubResource("Resource_fgha0"), SubResource("Resource_gr8mp")])
 
 [node name="Slot" type="TextureRect" parent="." unique_id=1915022763]
 layout_mode = 1

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://55aciwo38e6a"
+path="res://.godot/imported/act_3b_1.dialogue-fd3ded19fe98e37948c5976d42976d32.tres"
+
+[deps]
+
+source_file="res://story/act_3b_1.dialogue"
+dest_files=["res://.godot/imported/act_3b_1.dialogue-fd3ded19fe98e37948c5976d42976d32.tres"]
+
+[params]
+
+defaults=true

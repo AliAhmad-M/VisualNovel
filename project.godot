@@ -21,6 +21,7 @@ DialogueManager="*uid://c3rodes2l3gxb"
 Settings="*uid://d1aswpd4i7l0f"
 SaveManager="*uid://ce88w67nlrjvk"
 GameState="*uid://j4ctlyqyp2ub"
+GameManager="*uid://bxfwgl4rw381e"
 
 [dialogue_manager]
 
@@ -82,7 +83,7 @@ pointing/emulate_touch_from_mouse=true
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://story/tutorial.dialogue", "res://story/act_2.dialogue", "res://story/act_1.dialogue", "res://story/act_3a.dialogue", "res://story/act_3b.dialogue")
+locale/translations_pot_files=PackedStringArray("res://story/tutorial.dialogue", "res://story/act_2.dialogue", "res://story/act_1.dialogue", "res://story/act_3a.dialogue", "res://story/act_3b.dialogue", "res://story/act_3b_1.dialogue", "res://story/act_4a.dialogue", "res://story/act_4b.dialogue")
 
 [physics]
 

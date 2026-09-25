@@ -20,12 +20,12 @@ Mom (Text): If you find a letter, don't open it yet.
 Mom (Text): We'll take about it once I'm back.
 Ayyan: ...Mom's acting strange, I'm really worried.
 Ayyan: So do I listen to her, or...?
-- Don't open the lettrue
+- Don't open the letter
 	do GameState.fields["read_letter"] = false
     Ayyan [#mood=neutral]: No. Whatever this is, it can wait for her.
     Narrator: Ayyan sets the letter back down on the desk, unopened.
     Ayyan: I'll ask her about it when she's home.
-	do GameState.fields["next_act"] = "act2"
+	do GameState.fields["next_act"] = "act_2"
     => END
 - Open the letter
 	do GameState.fields["read_letter"] = true
@@ -47,5 +47,5 @@ Letter: "— FRIEND."
 Ayyan [#mood=frown]: ...What is this? Who sent this?
 Ayyan: "Things about my family"? What does that even mean?
 Ayyan: I need to think about this.
-do GameState.fields["next_act"] = "act2"
+do GameState.fields["next_act"] = "act_2"
 => END

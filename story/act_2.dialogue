@@ -58,20 +58,22 @@ Mom [#mood=sad]: Promise me, Ayyan. You have to promise me you won't go there.
 	=> insist_response
 
 ~ promise_response_truth
-do GameState.fields["next_act"] = "act3b"
+do GameState.fields["next_act"] = "act_3b"
 Ayyan [#mood=default]: I won't go, Mom. Don't worry.
 Mom [#mood=happy]: I'm so relieved. I would never want you to be in any danger.
 => END
 
 ~ promise_response_lie
-do GameState.fields["next_act"] = "act3a"
+do GameState.fields["lie_about_not_going"] = true
+do GameState.fields["next_act"] = "act_3a"
 Ayyan [#mood=neutral]: (I feel kinda bad about lying to Mom). 
 Ayyan [#mood=default]: I won't go, Mom. Don't worry.
 Mom [#mood=happy]: I'm so relieved. I would never want you to be in any danger.
 => END
 
 ~ insist_response
-do GameState.fields["next_act"] = "act3a"
+do GameState.fields["lie_about_not_going"] = false
+do GameState.fields["next_act"] = "act_3a"
 Ayyan [#mood=frown]: I have to go, mom. I'm sorry.
 Ayyan: Don't worry about me, I'll be safe, I promise.
 Mom [#mood=sad]: Please, Ayyan, I beg you, don't go.

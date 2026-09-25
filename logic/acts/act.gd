@@ -13,6 +13,6 @@ func _on_dialogue_ended(resource: DialogueResource) -> void:
 	if resource != dialogue_resource:
 		return
 
-	var next_act_name = GameState["next_act"]
-	if next_act_name:
+	var next_act_name: String = GameState.fields["next_act"]
+	if next_act_name.length() > 0:
 		get_tree().change_scene_to_file("res://logic/acts/%s.tscn" % next_act_name)
