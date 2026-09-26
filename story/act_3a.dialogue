@@ -1,5 +1,5 @@
 ~ start
-Narrator: The next day, Ayyan meets his friend, Hamza.
+Narrator: The next day, Ayan meets his friend, Hamza.
 
 if GameState.fields.get("lie_about_not_going", true):
 	=> confront_lie
@@ -7,28 +7,28 @@ else:
 	=> confront_truth
 
 ~ confront_truth
-Hamza [#mood=smile]: Ayyan! There you are.
+Hamza [#mood=smile]: Ayan! There you are.
 Hamza [#mood=frown]: Hey... your mother came by yesterday.
 
-Ayyan [#mood=neutral]: (Oh no.)
-Ayyan [#mood=neutral]: What did she say?
+Ayan [#mood=neutral]: (Oh no.)
+Ayan [#mood=neutral]: What did she say?
 
 Hamza [#mood=frown]: She told me you're thinking of doing something dangerous.
 Hamza [#mood=angry]: As your childhood friend, I can never allow you to put yourself at risk.
 Hamza: Not to mention, your mother is worried sick about you!
 
-Ayyan [#mood=shock]: (This is a problem, what do I do now...)
+Ayan [#mood=shock]: (This is a problem, what do I do now...)
 - Be honest with him
-	Ayyan [#mood=neutral]: ...Alright. Listen to me, Hamza.
-	Ayyan: This is a serious matter we're dealing with.
+	Ayan [#mood=neutral]: ...Alright. Listen to me, Hamza.
+	Ayan: This is a serious matter we're dealing with.
 
 	Hamza [#mood=neutral]: I'm listening.
 
-	Ayyan: I got a mysterious letter yesterday, inviting me to the Blackhood Mansion.
+	Ayan: I got a mysterious letter yesterday, inviting me to the Blackhood Mansion.
 	Hamza [#mood=shock]: The Blackhood Mansion? That place has been abandoned for years!
 
-	Ayyan [#mood=angry]: It says they know the truth about my father!
-	Ayyan: I'm sorry, Hamza, but I need to go there.
+	Ayan [#mood=angry]: It says they know the truth about my father!
+	Ayan: I'm sorry, Hamza, but I need to go there.
 
 	Hamza [#mood=neutral]: ...
 	Hamza [#mood=neutral]: In that case... take me with you.
@@ -36,80 +36,80 @@ Ayyan [#mood=shock]: (This is a problem, what do I do now...)
 	Hamza: How would I face your mother if something were to happen to you?
 
 	- Agree
-		Ayyan [#mood=neutral]: ...Fine, if you insist.
-		Ayyan [#mood=smile]: Tomorrow, let us go there together!
+		Ayan [#mood=neutral]: ...Fine, if you insist.
+		Ayan [#mood=smile]: Tomorrow, let us go there together!
 		do GameState.fields["next_act"] = "act_4b"
 		=> END
 	- Refuse
-		Ayyan [#mood=neutral]: I can't, Hamza. They said not to bring anyone.
-		Ayyan: Besides, I can't put others at risk.
-		Ayyan: This is something only I must deal with.
+		Ayan [#mood=neutral]: I can't, Hamza. They said not to bring anyone.
+		Ayan: Besides, I can't put others at risk.
+		Ayan: This is something only I must deal with.
 		=> reject_hamza
 
 - Tell him to back off
-	Ayyan [#mood=frown]: Well, instead of worrying about me...
-	Ayyan [#mood=angry]: Why doesn't everyone mind their own damn business!
-	Ayyan: I don't need you all to treat me like a kid! I can handle myself!
+	Ayan [#mood=frown]: Well, instead of worrying about me...
+	Ayan [#mood=angry]: Why doesn't everyone mind their own damn business!
+	Ayan: I don't need you all to treat me like a kid! I can handle myself!
 
 	Hamza [#mood=shock]: ...
 	=> reject_hamza
 
 ~ confront_lie
-Hamza [#mood=smile]: Hey Ayyan! Good timing, I was just about to look for you.
-Ayyan [#mood=neutral]: Hamza. What's up?
+Hamza [#mood=smile]: Hey Ayan! Good timing, I was just about to look for you.
+Ayan [#mood=neutral]: Hamza. What's up?
 
 Hamza [#mood=neutral]: Nothing much, just wanted to catch up.
 Hamza: You've seemed... distracted lately.
 
-Ayyan [#mood=neutral]: (I guess I haven't been hiding it as well as I thought.)
+Ayan [#mood=neutral]: (I guess I haven't been hiding it as well as I thought.)
 
 Hamza [#mood=frown]: Is everything alright? You can tell me, you know.
 
-Ayyan [#mood=shock]: (Should I tell him... He deserves to know, at the very least.)
+Ayan [#mood=shock]: (Should I tell him... He deserves to know, at the very least.)
 - Tell him the truth
-	Ayyan [#mood=neutral]: Actually... there's something I need to tell you.
+	Ayan [#mood=neutral]: Actually... there's something I need to tell you.
 
 	Hamza [#mood=neutral]: Oh?
 
-	Ayyan: Yesterday, I received a strange letter.
-	Ayyan [#mood=frown]: It was an invitation, to the Blackhood Mansion.
+	Ayan: Yesterday, I received a strange letter.
+	Ayan [#mood=frown]: It was an invitation, to the Blackhood Mansion.
 
 	Hamza [#mood=shock]: The Blackhood Mansion? That place has been abandoned for years!
 
-	Ayyan [#mood=angry]: The letter said they know the truth about my father.
-	Ayyan: I have to go there, Hamza. I need answers.
+	Ayan [#mood=angry]: The letter said they know the truth about my father.
+	Ayan: I have to go there, Hamza. I need answers.
 
 	Hamza [#mood=frown]: ...
-	Hamza: Ayyan, that sounds dangerous. You can't just walk into something like that alone.
+	Hamza: Ayan, that sounds dangerous. You can't just walk into something like that alone.
 	Hamza: Let me come with you.
 
 	- Agree
-		Ayyan [#mood=neutral]: ...Alright. Fine, if you insist.
-		Ayyan [#mood=smile]: Tomorrow, let's go there together.
+		Ayan [#mood=neutral]: ...Alright. Fine, if you insist.
+		Ayan [#mood=smile]: Tomorrow, let's go there together.
 		do GameState.fields["next_act"] = "act_4b"
 		
 		=> END
 	- Refuse
-		Ayyan [#mood=neutral]: I can't, Hamza. They said not to bring anyone.
-		Ayyan: Besides, I can't put you in danger too.
-		Ayyan: This is something only I must deal with.
+		Ayan [#mood=neutral]: I can't, Hamza. They said not to bring anyone.
+		Ayan: Besides, I can't put you in danger too.
+		Ayan: This is something only I must deal with.
 		=> reject_hamza
 
 - Keep it to himself
-	Ayyan [#mood=neutral]: It's nothing, really. Just tired, that's all.
+	Ayan [#mood=neutral]: It's nothing, really. Just tired, that's all.
 
 	Hamza [#mood=frown]: ...If you say so.
 	Hamza: You know I'm here if you change your mind, right?
 
-	Ayyan [#mood=neutral]: Yeah. I know.
+	Ayan [#mood=neutral]: Yeah. I know.
 	do GameState.fields["next_act"] = "act_4a"
 	=> END
 
 ~ reject_hamza
-Hamza [#mood=sad]: Ayyan...
+Hamza [#mood=sad]: Ayan...
 Hamza: I just don't want you to do something that would bring you harm.
 
-Ayyan [#mood=neutral]: ...
+Ayan [#mood=neutral]: ...
 
 Hamza [#mood=angry]: We're just trying to keep you safe, can't you see that!
 Hamza [#mood=sad]: But if you've made your decision... there is nothing I can do to stop you.

@@ -1,3 +1,113 @@
 ~ start
+Narrator: Headed towards Blackwood Mansion, Ayan and Hamza make their way into the forest.
 
-=> END
+Hamza [#mood=neutral]: So...
+Hamza: We're really doing this?
+
+Ayan [#mood=neutral]: Looks like it.
+Ayan: It's not like we have a choice.
+
+Hamza [#mood=neutral]: ...
+Hamza: You still haven't told me what you expect to find there.
+
+Ayan [#mood=neutral]: The truth, apparently.
+Ayan: It's the only thing I can think of...
+
+Narrator: Hamza studies him for a moment.
+
+Hamza [#mood=smile]: That's a very dramatic answer. Just what I'd expect from you.
+Hamza [#mood=neutral]: Are you sure your father had something to do with this place?
+
+Ayan [#mood=neutral]: My mom said he worked there a long time ago.
+Ayan: I have a strong feeling I'll find the answers I'm looking for.
+
+Hamza [#mood=frown]: That's not exactly the same thing.
+Hamza: Besides... we can't always rely on our feelings.
+
+Ayan [#mood=neutral]: ...
+
+Narrator: Ayan looks away.
+
+Ayan: (I must uncover the truth.)
+
+Narrator: They walk on in silence for a while.
+
+Hamza [#mood=smile]: You know, I'm really glad you didn't go alone.
+Hamza: I'm sure your mother would be less worried knowing that I came along.
+
+Ayan [#mood=neutral]: ...Yeah. Thanks, Hamza.
+
+Narrator: Hamza suddenly goes still, glancing toward the trees.
+
+Hamza [#mood=frown]: ...
+
+Narrator: A few seconds pass before he speaks again.
+
+Hamza: Did you hear that?
+
+Ayan [#mood=neutral]: Hear what?
+
+Narrator: Hamza waits, listening.
+
+Hamza [#mood=neutral]: ...Must be my imagination.
+Hamza: Well, let's just move on.
+
+Narrator: They keep walking.
+
+Hamza [#mood=neutral]: Are you sure this way leads to the mansion?
+Hamza: We've been walking through the forest for a while now.
+
+Narrator: Hamza looks uneasy.
+
+Hamza: (I have a bad feeling about this.)
+
+Ayan [#mood=default]: Yup, I checked before leaving.
+
+Narrator: Ayan pulls out an old, folded map, tracing a line across it with his finger.
+
+Ayan [#mood=neutral]: Apparently this entire land belonged to the Blackwood family.
+Ayan: But it's been abandoned for a while now...
+
+Narrator: Silence settles between them again.
+
+Narrator: Then, without warning, a gunshot cracks through the forest.
+
+Narrator: Hamza drops to the ground, covered in blood.
+
+Ayan [#mood=shock]: Hamza!!!
+
+Narrator: Ayan drops to his knees beside him, with his hands shaking.
+
+Ayan [#mood=sad]: No, no, no. Stay with me, Hamza! Please!
+
+Narrator: Footsteps approach through the trees, slow and unhurried.
+Narrator: A masked gunman steps into view.
+Narrator: Ayan slowly rises to his feet, placing himself between the gunman and Hamza.
+
+Ayan [#mood=angry]: Who are you?! Why did you do this?!
+
+Shooter: ...
+
+Shooter: You took our instructions lightly.
+Shooter: He was not supposed to be here...
+
+Ayan [#mood=shock]: What?
+
+Shooter: You were told to come alone.
+Shooter: The only one to blame... is you.
+
+Ayan [#mood=shock]: How do you even know about the letter?
+Ayan [#mood=angry]: Were you the one who wrote it? What do you want with me?!
+
+Shooter: You really should have listened.
+
+Narrator: The gunman then raises his weapon.
+Narrator: Ayan is presented with 2 options.
+
+- Give up
+	do GameState.fields["next_act"] = ""
+	do GameManager.go_to_main_menu()
+	=> END
+- Try again
+	do GameState.fields["next_act"] = "act_3a"
+	=> END

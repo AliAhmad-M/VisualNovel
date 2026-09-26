@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://yenwdfjmmshm"]
+
+[ext_resource type="Script" uid="uid://cw03syrurob0o" path="res://logic/acts/act.gd" id="1_lc1c3"]
+[ext_resource type="Resource" uid="uid://hag2dnp08w4q" path="res://story/act_4b.dialogue" id="2_miggf"]
+[ext_resource type="Texture2D" uid="uid://mc2vwfqiru4j" path="res://assets/textures/backgrounds/city/abbey_grove.jpg" id="3_iaiyl"]
+[ext_resource type="Shader" uid="uid://43hl6navadgx" path="res://logic/acts/night.gdshader" id="3_xwlr7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_miggf"]
+shader = ExtResource("3_xwlr7")
+shader_parameter/night_amount = 1.0
+shader_parameter/min_brightness = 0.750000035625
+shader_parameter/night_tint = Color(0.1485, 0.19874994, 0.45, 1)
+shader_parameter/tint_strength = 0.50000002375
+
+[node name="Act4b" type="Control" unique_id=659108384]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lc1c3")
+dialogue_resource = ExtResource("2_miggf")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=456817256]
+material = SubResource("ShaderMaterial_miggf")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_iaiyl")

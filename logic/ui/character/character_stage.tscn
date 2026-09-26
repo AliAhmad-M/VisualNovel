@@ -38,6 +38,56 @@
 [ext_resource type="Texture2D" uid="uid://cbevlkwjtsonb" path="res://assets/textures/characters/hamza/9.png" id="36_0ixil"]
 [ext_resource type="Texture2D" uid="uid://bxvrb8cjupcjq" path="res://assets/textures/characters/hamza/10.png" id="37_c00xx"]
 [ext_resource type="Texture2D" uid="uid://c70blqkd7jwlk" path="res://assets/textures/characters/shooter.png" id="38_yhw4o"]
+[ext_resource type="Texture2D" uid="uid://civtt48ewev7b" path="res://assets/textures/characters/zara/1.png" id="39_uhuch"]
+[ext_resource type="Texture2D" uid="uid://dqncjef6rjmll" path="res://assets/textures/characters/zara/2.png" id="40_ofeii"]
+[ext_resource type="Texture2D" uid="uid://d2jrxmqjvl4ot" path="res://assets/textures/characters/zara/3.png" id="41_f8pd0"]
+[ext_resource type="Texture2D" uid="uid://burkouh6ji4ul" path="res://assets/textures/characters/zara/4.png" id="42_fwtvx"]
+[ext_resource type="Texture2D" uid="uid://bsilvgsqx2uke" path="res://assets/textures/characters/zara/5.png" id="43_q8sk3"]
+[ext_resource type="Texture2D" uid="uid://t7k07t08ynie" path="res://assets/textures/characters/zara/6.png" id="44_2jl0i"]
+[ext_resource type="Texture2D" uid="uid://cjxrw30xuiy4g" path="res://assets/textures/characters/zara/7.png" id="45_2jl0i"]
+[ext_resource type="Texture2D" uid="uid://b23t3e100fexn" path="res://assets/textures/characters/zara/8.png" id="46_cwfyg"]
+[ext_resource type="Texture2D" uid="uid://vcqot3wb8516" path="res://assets/textures/characters/zara/9.png" id="47_aeqfv"]
+[ext_resource type="Texture2D" uid="uid://gliqydlfqtjh" path="res://assets/textures/characters/zara/10.png" id="48_41egl"]
+[ext_resource type="Texture2D" uid="uid://dj66mqrgigkdp" path="res://assets/textures/characters/zara/11.png" id="49_t86up"]
+[ext_resource type="Texture2D" uid="uid://biwh8r5f55i85" path="res://assets/textures/characters/rayan/5.png" id="50_jlibi"]
+[ext_resource type="Texture2D" uid="uid://ifemg5dmhu3o" path="res://assets/textures/characters/rayan/8.png" id="51_r687k"]
+[ext_resource type="Texture2D" uid="uid://dc76g2tqfmyng" path="res://assets/textures/characters/rayan/9.png" id="52_g1oir"]
+[ext_resource type="Texture2D" uid="uid://dltbma14xjjsa" path="res://assets/textures/characters/rayan/6.png" id="53_vahd5"]
+[ext_resource type="Texture2D" uid="uid://cymjvta87bkyc" path="res://assets/textures/characters/rayan/10.png" id="54_kg615"]
+[ext_resource type="Texture2D" uid="uid://clqev41diw0mc" path="res://assets/textures/characters/saad/1.png" id="55_g0adu"]
+[ext_resource type="Texture2D" uid="uid://ksahn6marxh7" path="res://assets/textures/characters/elias/6.png" id="55_mhl2j"]
+[ext_resource type="Texture2D" uid="uid://co5uf6iy007w2" path="res://assets/textures/characters/mira/3.png" id="55_r687k"]
+[ext_resource type="Texture2D" uid="uid://bepoktx7p4aeg" path="res://assets/textures/characters/mira/5.png" id="56_kg615"]
+[ext_resource type="Texture2D" uid="uid://btpygo10y0d8y" path="res://assets/textures/characters/saad/2.png" id="56_te50n"]
+[ext_resource type="Texture2D" uid="uid://dqx51f1jx7wwf" path="res://assets/textures/characters/elias/7.png" id="56_u4rjt"]
+[ext_resource type="Texture2D" uid="uid://b01cj7bq55dmm" path="res://assets/textures/characters/mira/6.png" id="57_1kn4t"]
+[ext_resource type="Texture2D" uid="uid://bapmgv2qomu68" path="res://assets/textures/characters/saad/3.png" id="57_81j43"]
+[ext_resource type="Texture2D" uid="uid://b7ow7bxpin8d3" path="res://assets/textures/characters/elias/9.png" id="57_g0l7y"]
+[ext_resource type="Texture2D" uid="uid://qrmnrrklsy06" path="res://assets/textures/characters/mira/8.png" id="58_35hbl"]
+[ext_resource type="Texture2D" uid="uid://cyta1lwpvkcqy" path="res://assets/textures/characters/saad/4.png" id="58_om5qg"]
+[ext_resource type="Texture2D" uid="uid://bm7x4ckfh8qy6" path="res://assets/textures/characters/elias/10.png" id="58_r726x"]
+[ext_resource type="Texture2D" uid="uid://btqey8vtpi61k" path="res://assets/textures/characters/nida/1.png" id="59_1kn4t"]
+[ext_resource type="Texture2D" uid="uid://d1l6367mp3xq8" path="res://assets/textures/characters/elias/11.png" id="59_hs1kh"]
+[ext_resource type="Texture2D" uid="uid://dxxcblc5lxun" path="res://assets/textures/characters/saad/5.png" id="59_vmo03"]
+[ext_resource type="Texture2D" uid="uid://binufbonnltwa" path="res://assets/textures/characters/saad/6.png" id="60_mhl2j"]
+[ext_resource type="Texture2D" uid="uid://crrs86od28m3v" path="res://assets/textures/characters/nida/2.png" id="60_yhdvj"]
+[ext_resource type="Texture2D" uid="uid://bqvj3mjbuui8a" path="res://assets/textures/characters/nida/3.png" id="61_qei0f"]
+[ext_resource type="Texture2D" uid="uid://c1wvl8e37fvk" path="res://assets/textures/characters/saad/7.png" id="61_u4rjt"]
+[ext_resource type="Texture2D" uid="uid://b6aj56ye1btfy" path="res://assets/textures/characters/saad/8.png" id="62_g0l7y"]
+[ext_resource type="Texture2D" uid="uid://ckhfcnase0taf" path="res://assets/textures/characters/nida/4.png" id="62_rug6b"]
+[ext_resource type="Texture2D" uid="uid://cg1ev027y3r5s" path="res://assets/textures/characters/nida/5.png" id="63_1c275"]
+[ext_resource type="Texture2D" uid="uid://dxo16e3qmth3p" path="res://assets/textures/characters/saad/9.png" id="63_r726x"]
+[ext_resource type="Texture2D" uid="uid://dmur4f7cyt057" path="res://assets/textures/characters/saad/10.png" id="64_hs1kh"]
+[ext_resource type="Texture2D" uid="uid://ds8datnf34ogn" path="res://assets/textures/characters/nida/9.png" id="64_xxy8b"]
+[ext_resource type="Texture2D" uid="uid://c5533q27a8ot7" path="res://assets/textures/characters/nida/10.png" id="65_ntiso"]
+[ext_resource type="Texture2D" uid="uid://b26wtsumyq7ay" path="res://assets/textures/characters/nida/11.png" id="66_wqtvg"]
+[ext_resource type="Texture2D" uid="uid://c05hhs4yiu1g2" path="res://assets/textures/characters/sam/1.png" id="82_4nswt"]
+[ext_resource type="Texture2D" uid="uid://dickgk46vl4s0" path="res://assets/textures/characters/sam/2.png" id="83_uiu8k"]
+[ext_resource type="Texture2D" uid="uid://tqktfd0blhn6" path="res://assets/textures/characters/sam/3.png" id="84_67mly"]
+[ext_resource type="Texture2D" uid="uid://d1e6oel1am1t2" path="res://assets/textures/characters/sam/4.png" id="85_fferg"]
+[ext_resource type="Texture2D" uid="uid://db6o02a8wqllj" path="res://assets/textures/characters/sam/5.png" id="86_os10u"]
+[ext_resource type="Texture2D" uid="uid://dh7ixy7v0c33i" path="res://assets/textures/characters/sam/6.png" id="87_sclvh"]
+[ext_resource type="Texture2D" uid="uid://xq7jfc53852x" path="res://assets/textures/characters/sam/7.png" id="88_4ld17"]
 
 [sub_resource type="Resource" id="Resource_nes3t"]
 script = ExtResource("3_6nigo")
@@ -159,7 +209,7 @@ metadata/_custom_type_script = "uid://bgpwik0iic747"
 
 [sub_resource type="Resource" id="Resource_h0wlx"]
 script = ExtResource("2_58psd")
-character_name = "Ayyan"
+character_name = "Ayan"
 expressions = Array[ExtResource("3_6nigo")]([SubResource("Resource_773hf"), SubResource("Resource_c8ntk"), SubResource("Resource_abeb8"), SubResource("Resource_oooae"), SubResource("Resource_aoo56"), SubResource("Resource_yyehl"), SubResource("Resource_xvych"), SubResource("Resource_lr8w7"), SubResource("Resource_uuod6")])
 metadata/_custom_type_script = "uid://o1b5kf5okdd1"
 
@@ -270,8 +320,343 @@ metadata/_custom_type_script = "uid://bgpwik0iic747"
 
 [sub_resource type="Resource" id="Resource_gr8mp"]
 script = ExtResource("2_58psd")
-character_name = "shooter"
+character_name = "Shooter"
 expressions = Array[ExtResource("3_6nigo")]([SubResource("Resource_nreba")])
+metadata/_custom_type_script = "uid://o1b5kf5okdd1"
+
+[sub_resource type="Resource" id="Resource_xvkr2"]
+script = ExtResource("3_6nigo")
+texture = ExtResource("39_uhuch")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_40j3u"]
+script = ExtResource("3_6nigo")
+expression_name = "shock"
+texture = ExtResource("40_ofeii")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_cvj3f"]
+script = ExtResource("3_6nigo")
+expression_name = "neutral"
+texture = ExtResource("41_f8pd0")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_n5d3x"]
+script = ExtResource("3_6nigo")
+expression_name = "happy"
+texture = ExtResource("42_fwtvx")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_qkkte"]
+script = ExtResource("3_6nigo")
+expression_name = "frown"
+texture = ExtResource("43_q8sk3")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_g2c4s"]
+script = ExtResource("3_6nigo")
+expression_name = "angry"
+texture = ExtResource("44_2jl0i")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_e33g5"]
+script = ExtResource("3_6nigo")
+expression_name = "keen"
+texture = ExtResource("45_2jl0i")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_qtt33"]
+script = ExtResource("3_6nigo")
+expression_name = "annoyed"
+texture = ExtResource("46_cwfyg")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_tl6yl"]
+script = ExtResource("3_6nigo")
+expression_name = "sad"
+texture = ExtResource("47_aeqfv")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_3stja"]
+script = ExtResource("3_6nigo")
+expression_name = "smile"
+texture = ExtResource("48_41egl")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_ypnfa"]
+script = ExtResource("3_6nigo")
+expression_name = "happy"
+texture = ExtResource("49_t86up")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_toj8d"]
+script = ExtResource("2_58psd")
+character_name = "Zara"
+expressions = Array[ExtResource("3_6nigo")]([SubResource("Resource_xvkr2"), SubResource("Resource_40j3u"), SubResource("Resource_cvj3f"), SubResource("Resource_n5d3x"), SubResource("Resource_qkkte"), SubResource("Resource_g2c4s"), SubResource("Resource_e33g5"), SubResource("Resource_qtt33"), SubResource("Resource_tl6yl"), SubResource("Resource_3stja"), SubResource("Resource_ypnfa")])
+metadata/_custom_type_script = "uid://o1b5kf5okdd1"
+
+[sub_resource type="Resource" id="Resource_2jl0i"]
+script = ExtResource("3_6nigo")
+texture = ExtResource("50_jlibi")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_cwfyg"]
+script = ExtResource("3_6nigo")
+expression_name = "frown"
+texture = ExtResource("51_r687k")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_aeqfv"]
+script = ExtResource("3_6nigo")
+expression_name = "angry"
+texture = ExtResource("52_g1oir")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_41egl"]
+script = ExtResource("3_6nigo")
+expression_name = "shock"
+texture = ExtResource("53_vahd5")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_t86up"]
+script = ExtResource("3_6nigo")
+expression_name = "sad"
+texture = ExtResource("54_kg615")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_jlibi"]
+script = ExtResource("2_58psd")
+character_name = "Rayan"
+expressions = Array[ExtResource("3_6nigo")]([SubResource("Resource_2jl0i"), SubResource("Resource_cwfyg"), SubResource("Resource_aeqfv"), SubResource("Resource_41egl"), SubResource("Resource_t86up")])
+metadata/_custom_type_script = "uid://o1b5kf5okdd1"
+
+[sub_resource type="Resource" id="Resource_vdw8c"]
+script = ExtResource("3_6nigo")
+texture = ExtResource("55_mhl2j")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_mm372"]
+script = ExtResource("3_6nigo")
+expression_name = "shock"
+texture = ExtResource("56_u4rjt")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_4nswt"]
+script = ExtResource("3_6nigo")
+expression_name = "frown"
+texture = ExtResource("57_g0l7y")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_uiu8k"]
+script = ExtResource("3_6nigo")
+expression_name = "angry"
+texture = ExtResource("58_r726x")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_67mly"]
+script = ExtResource("3_6nigo")
+expression_name = "sad"
+texture = ExtResource("59_hs1kh")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_gq36l"]
+script = ExtResource("2_58psd")
+character_name = "Elias"
+expressions = Array[ExtResource("3_6nigo")]([SubResource("Resource_vdw8c"), SubResource("Resource_mm372"), SubResource("Resource_4nswt"), SubResource("Resource_uiu8k"), SubResource("Resource_67mly")])
+metadata/_custom_type_script = "uid://o1b5kf5okdd1"
+
+[sub_resource type="Resource" id="Resource_81j43"]
+script = ExtResource("3_6nigo")
+texture = ExtResource("55_g0adu")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_om5qg"]
+script = ExtResource("3_6nigo")
+expression_name = "smile"
+texture = ExtResource("56_te50n")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_vmo03"]
+script = ExtResource("3_6nigo")
+expression_name = "happy"
+texture = ExtResource("57_81j43")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_mhl2j"]
+script = ExtResource("3_6nigo")
+expression_name = "joy"
+texture = ExtResource("58_om5qg")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_u4rjt"]
+script = ExtResource("3_6nigo")
+expression_name = "neutral"
+texture = ExtResource("59_vmo03")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_g0l7y"]
+script = ExtResource("3_6nigo")
+expression_name = "shock"
+texture = ExtResource("60_mhl2j")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_r726x"]
+script = ExtResource("3_6nigo")
+expression_name = "keen"
+texture = ExtResource("61_u4rjt")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_hs1kh"]
+script = ExtResource("3_6nigo")
+expression_name = "frown"
+texture = ExtResource("62_g0l7y")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_fferg"]
+script = ExtResource("3_6nigo")
+expression_name = "angry"
+texture = ExtResource("63_r726x")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_os10u"]
+script = ExtResource("3_6nigo")
+expression_name = "sad"
+texture = ExtResource("64_hs1kh")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_gh8hn"]
+script = ExtResource("2_58psd")
+character_name = "Saad"
+expressions = Array[ExtResource("3_6nigo")]([SubResource("Resource_81j43"), SubResource("Resource_om5qg"), SubResource("Resource_vmo03"), SubResource("Resource_mhl2j"), SubResource("Resource_u4rjt"), SubResource("Resource_g0l7y"), SubResource("Resource_r726x"), SubResource("Resource_hs1kh"), SubResource("Resource_fferg"), SubResource("Resource_os10u")])
+metadata/_custom_type_script = "uid://o1b5kf5okdd1"
+
+[sub_resource type="Resource" id="Resource_35hbl"]
+script = ExtResource("3_6nigo")
+texture = ExtResource("55_r687k")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_r687k"]
+script = ExtResource("3_6nigo")
+expression_name = "frown"
+texture = ExtResource("56_kg615")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_g1oir"]
+script = ExtResource("3_6nigo")
+expression_name = "angry"
+texture = ExtResource("57_1kn4t")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_vahd5"]
+script = ExtResource("3_6nigo")
+expression_name = "annoyed"
+texture = ExtResource("58_35hbl")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_1kn4t"]
+script = ExtResource("2_58psd")
+character_name = "Mira"
+expressions = Array[ExtResource("3_6nigo")]([SubResource("Resource_35hbl"), SubResource("Resource_r687k"), SubResource("Resource_g1oir"), SubResource("Resource_vahd5")])
+metadata/_custom_type_script = "uid://o1b5kf5okdd1"
+
+[sub_resource type="Resource" id="Resource_tiqtj"]
+script = ExtResource("3_6nigo")
+texture = ExtResource("59_1kn4t")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_tstkm"]
+script = ExtResource("3_6nigo")
+expression_name = "shock"
+texture = ExtResource("60_yhdvj")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_5jx02"]
+script = ExtResource("3_6nigo")
+expression_name = "neutral"
+texture = ExtResource("61_qei0f")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_0tb2h"]
+script = ExtResource("3_6nigo")
+expression_name = "happy"
+texture = ExtResource("62_rug6b")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_l4rae"]
+script = ExtResource("3_6nigo")
+expression_name = "frown"
+texture = ExtResource("63_1c275")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_g0adu"]
+script = ExtResource("3_6nigo")
+expression_name = "sad"
+texture = ExtResource("64_xxy8b")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_xt6cr"]
+script = ExtResource("3_6nigo")
+expression_name = "smile"
+texture = ExtResource("65_ntiso")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_yhdvj"]
+script = ExtResource("3_6nigo")
+expression_name = "happy"
+texture = ExtResource("66_wqtvg")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_te50n"]
+script = ExtResource("2_58psd")
+character_name = "Nida"
+expressions = Array[ExtResource("3_6nigo")]([SubResource("Resource_tiqtj"), SubResource("Resource_tstkm"), SubResource("Resource_5jx02"), SubResource("Resource_0tb2h"), SubResource("Resource_l4rae"), SubResource("Resource_g0adu"), SubResource("Resource_xt6cr"), SubResource("Resource_yhdvj")])
+metadata/_custom_type_script = "uid://o1b5kf5okdd1"
+
+[sub_resource type="Resource" id="Resource_cxwg4"]
+script = ExtResource("3_6nigo")
+texture = ExtResource("82_4nswt")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_m8wb0"]
+script = ExtResource("3_6nigo")
+expression_name = "smile"
+texture = ExtResource("83_uiu8k")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_8fywp"]
+script = ExtResource("3_6nigo")
+expression_name = "happy"
+texture = ExtResource("84_67mly")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_8rvs8"]
+script = ExtResource("3_6nigo")
+expression_name = "joy"
+texture = ExtResource("85_fferg")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_f4q54"]
+script = ExtResource("3_6nigo")
+expression_name = "neutral"
+texture = ExtResource("86_os10u")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_l12t1"]
+script = ExtResource("3_6nigo")
+expression_name = "shock"
+texture = ExtResource("87_sclvh")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_8lu70"]
+script = ExtResource("3_6nigo")
+expression_name = "keen"
+texture = ExtResource("88_4ld17")
+metadata/_custom_type_script = "uid://bgpwik0iic747"
+
+[sub_resource type="Resource" id="Resource_onjjq"]
+script = ExtResource("2_58psd")
+character_name = "Sam"
+expressions = Array[ExtResource("3_6nigo")]([SubResource("Resource_cxwg4"), SubResource("Resource_m8wb0"), SubResource("Resource_8fywp"), SubResource("Resource_8rvs8"), SubResource("Resource_f4q54"), SubResource("Resource_l12t1"), SubResource("Resource_8lu70")])
 metadata/_custom_type_script = "uid://o1b5kf5okdd1"
 
 [node name="CharacterStage" type="Control" unique_id=1262265244]
@@ -284,7 +669,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_6fbgj")
 slide_time = 0.15
-portrait_entries = Array[ExtResource("2_58psd")]([SubResource("Resource_0xm2m"), SubResource("Resource_h0wlx"), SubResource("Resource_0osgw"), SubResource("Resource_fgha0"), SubResource("Resource_gr8mp")])
+portrait_entries = Array[ExtResource("2_58psd")]([SubResource("Resource_0xm2m"), SubResource("Resource_h0wlx"), SubResource("Resource_0osgw"), SubResource("Resource_fgha0"), SubResource("Resource_gr8mp"), SubResource("Resource_toj8d"), SubResource("Resource_jlibi"), SubResource("Resource_gq36l"), SubResource("Resource_gh8hn"), SubResource("Resource_1kn4t"), SubResource("Resource_te50n"), SubResource("Resource_onjjq")])
 
 [node name="Slot" type="TextureRect" parent="." unique_id=1915022763]
 layout_mode = 1

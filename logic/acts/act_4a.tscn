@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://0mconyhf21ai"]
+
+[ext_resource type="Script" uid="uid://cw03syrurob0o" path="res://logic/acts/act.gd" id="1_3jlpi"]
+[ext_resource type="Texture2D" uid="uid://ehgva6mmdch3" path="res://assets/textures/backgrounds/city/abbey_hall.jpg" id="2_cw4gu"]
+[ext_resource type="Resource" uid="uid://bd2liwgqf06pd" path="res://story/act_4a.dialogue" id="2_toj8d"]
+
+[node name="Act4a" type="Control" unique_id=1139469144]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3jlpi")
+dialogue_resource = ExtResource("2_toj8d")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=421190166]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_cw4gu")

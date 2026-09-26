@@ -1,5 +1,132 @@
 ~ start
+Narrator: Ayan finally arrives at Blackwood Mansion, where he finds 6 other people present.
 
+Ayan [#mood=neutral]: Excuse me...
+Ayan: I received an invitation asking me to be here.
+Ayan: Are you all here for the same reason as well?
 
+Narrator: The group turns to look at him. For a moment, nobody answers.
+
+Zara [#mood=smile]: Ah, yes. All of us were invited to visit Blackwood residence.
+Zara: I think everyone might be here now.
+
+Zara [#mood=smile]: Why don't we all introduce ourselves!
+Zara [#mood=joy]: My name is Zara by the way. Nice to meet you!
+Zara: I'm here with my brother, Rayan. He also received the invitation.
+
+Narrator: She points to the young man standing beside her.
+
+Rayan: ...
+Rayan: Hi.
+
+Narrator: He says nothing more.
+
+Ayan [#mood=neutral]: (It seems Rayan isn't very talkative...)
+Ayan: (He's quite the opposite of his sister.)
+
+Elias: I'm Professor Elias Q.
+Elias: But you can just call me "Professor".
+
+Saad: The name's Saad, I'm a doctor of medicine.
+Saad: I work as a surgeon in the local hospital.
+
+Mira: Mira Khan.
+Mira: I work as an archivist.
+Mira: I've been looking into some old records related to the Blackwood family.
+
+Nida: I'm Nida.
+Nida [#mood=happy]: It's really nice to meet you... everyone.
+
+Sam: Hey y'all! Sam here.
+Sam [#mood=smile]: Nice to meet you guys.
+Sam: I hope we all get along, hehe.
+
+Narrator: All eyes settle back on Ayan.
+
+Ayan [#mood=default]: My name's Ayan.
+Ayan: I'm a private detective.
+
+Narrator: A short silence follows. Ayan looks around the room before continuing.
+
+Ayan [#mood=neutral]: Now that we've been introduced, I wanted to ask something.
+Ayan: The invitations that everyone received... did they all say the same thing?
+
+Mira: The general invitation was similar, but the details were different.
+Mira: I compared mine with Sam's when we arrived.
+
+Ayan [#mood=shock]: What kind of details?
+
+Mira: That's where things get interesting.
+Mira: Each letter seems to contain information specific to the person receiving it.
+Mira: Information that the sender shouldn't necessarily know.
+
+Sam [#mood=default]: Mine wasn't that exciting.
+Sam: It basically said that I would find some answers if I came here.
+Sam: *Shrugs*. Guess I'll find out soon enough.
+
+Narrator: Ayan pauses before speaking again.
+
+Ayan [#mood=neutral]: Mine mentioned that there were things I needed to know about this house.
+Ayan: ...It also mentioned my family.
+Ayan [#mood=neutral]: Did anyone else get something like that?
+
+Narrator: For a moment, nobody responds. Then Rayan speaks in a low voice.
+
+Rayan: ...
+Rayan [#mood=frown]: The contents of these letters aren't something we should be discussing casually.
+Rayan: (At least not until we have more information).
+
+Zara [#mood=neutral]: Rayan has a point.
+Zara: We don't know who sent these letters, or what they actually want from us.
+
+Saad [#mood=neutral]: We should also consider that some of the information may be deliberately misleading.
+Saad: Until we know who is behind this, trusting the contents of a mysterious letter would be very unwise.
+
+Elias [#mood=neutral]: Indeed.
+Elias: There is another problem.
+Elias: Whoever sent these letters knows something about each of us.
+
+Mira: Which means they may have investigated us beforehand.
+Mira: Or they may have access to information we thought was private.
+Mira: Either possibility is concerning.
+
+Nida [#mood=frown]: So... we're not supposed to tell each other what our letters said?
+Nida: Won't that be helpful for us?
+
+Mira: Not yet.
+Mira: At least, not until we understand why we were invited.
+
+Sam [#mood=smile]: Guys, guys.
+Sam: We've been in the house for five minutes and we're already keeping secrets from each other.
+Sam: That's not a great start y'know.
+
+Zara [#mood=neutral]: We're not keeping secrets from each other.
+Zara: We're just being careful.
+Zara: There's clearly something deeper going on.
+
+Narrator: Ayan looks down for a moment, piecing his thoughts together.
+
+Ayan [#mood=neutral]: One thing's for certain.
+Ayan: We're all here because of different pieces of the same puzzle.
+
+Sam: And y'all expect to solve the puzzle while hiding your pieces.
+Sam: *Shakes head*. This is going to be a long night.
+
+Nida [#mood=smile]: Maybe we're... uh... overthinking this.
+Nida: There could be a perfectly normal explanation for all of it.
+
+Mira: There could be.
+Mira: But we don't have enough evidence to assume that.
+
+Elias [#mood=neutral]: I suggest we wait until our host arrives.
+Elias: If we were invited here for a reason, I suspect we'll find out soon enough.
+
+Saad [#mood=neutral]: I agree.
+Saad: Until then, I think it's best that we keep the details of our letters to ourselves.
+
+Ayan [#mood=neutral]: Fine.
+Ayan: For now, I'll keep mine to myself.
+
+Ayan [#mood=frown]: But if someone here knows something about my family, I intend to find out what it is.
 
 => END

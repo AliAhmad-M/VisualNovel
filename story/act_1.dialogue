@@ -1,41 +1,41 @@
 ~ start
-Narrator: Ayyan, a young detective, wakes up to find a strange letter in his room.
-Ayyan [#mood=neutral]: What's this? A letter? I really wonder how this got here.
-Ayyan: I don't remember bringing in any letters with me yesterday.
-Ayyan [#mood=default]: Might as well take a look at it.
+Narrator: Ayan, a young detective, wakes up to find a strange letter in his room.
+Ayan [#mood=neutral]: What's this? A letter? I really wonder how this got here.
+Ayan: I don't remember bringing in any letters with me yesterday.
+Ayan [#mood=default]: Might as well take a look at it.
 => examine_letter
 
 
 ~ examine_letter
-Narrator: Ayyan picks up the envelope. It's addressed to him, in handwriting he doesn't recognize.
-Ayyan: "Special invitation for Mr. Ayyan... from the Blackwood family?"
-Ayyan [#mood=frown]: I've never heard that name before.
+Narrator: Ayan picks up the envelope. It's addressed to him, in handwriting he doesn't recognize.
+Ayan: "Special invitation for Mr. Ayan... from the Blackwood family?"
+Ayan [#mood=frown]: I've never heard that name before.
 => phone_interrupt
 
 
 ~ phone_interrupt
 Narrator: Before he can open it, his phone buzzes on the nightstand.
-Narrator: It's a text from Ayyan's mother.
+Narrator: It's a text from Ayan's mother.
 Mom (Text): If you find a letter, don't open it yet.
 Mom (Text): We'll take about it once I'm back.
-Ayyan: ...Mom's acting strange, I'm really worried.
-Ayyan: So do I listen to her, or...?
+Ayan: ...Mom's acting strange, I'm really worried.
+Ayan: So do I listen to her, or...?
 - Don't open the letter
 	do GameState.fields["read_letter"] = false
-    Ayyan [#mood=neutral]: No. Whatever this is, it can wait for her.
-    Narrator: Ayyan sets the letter back down on the desk, unopened.
-    Ayyan: I'll ask her about it when she's home.
+    Ayan [#mood=neutral]: No. Whatever this is, it can wait for her.
+    Narrator: Ayan sets the letter back down on the desk, unopened.
+    Ayan: I'll ask her about it when she's home.
 	do GameState.fields["next_act"] = "act_2"
     => END
 - Open the letter
 	do GameState.fields["read_letter"] = true
-	Ayyan [#mood=default]: She'll understand. I need to know what this is.
-	Ayyan [#mood=neutral]: Let's open it up.
+	Ayan [#mood=default]: She'll understand. I need to know what this is.
+	Ayan [#mood=neutral]: Let's open it up.
     => read_letter
 
 
 ~ read_letter
-Narrator: Ayyan tears open the envelope.
+Narrator: Ayan tears open the envelope.
 Letter: "AYAN,"
 Letter: "YOU HAVE BEEN INVITED TO BLACKWOOD MANSION."
 Letter: "SEPTEMBER 17, 6:00 PM."
@@ -44,8 +44,8 @@ Letter: "THERE ARE THINGS YOU DESERVE TO KNOW."
 Letter: "ABOUT THE MANSION."
 Letter: "ABOUT YOUR FATHER."
 Letter: "— FRIEND."
-Ayyan [#mood=frown]: ...What is this? Who sent this?
-Ayyan: "Things about my family"? What does that even mean?
-Ayyan: I need to think about this.
+Ayan [#mood=frown]: ...What is this? Who sent this?
+Ayan: "Things about my family"? What does that even mean?
+Ayan: I need to think about this.
 do GameState.fields["next_act"] = "act_2"
 => END
